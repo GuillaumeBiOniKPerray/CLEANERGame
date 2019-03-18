@@ -12,6 +12,7 @@ public class EndZoneScript : MonoBehaviour {
     // TODO : Make the endzone accept multiple trashballs
     // TODO : Create an engame panel with the "star system"
     // TODO : Create a system on special levels to allow the loss of a given amount of trash -> boolean?
+    // TODO : Player tells the system whenever he has finished the level by pressing the "Incinerator Button"
     
     private LevelManager levelManager;
 
@@ -22,6 +23,8 @@ public class EndZoneScript : MonoBehaviour {
     // Completion variables
     private float minTrashRequired;
     private float goldMedalRequired;
+
+    private float currentCompletion;
 
 
     private void Start()
@@ -52,13 +55,13 @@ public class EndZoneScript : MonoBehaviour {
             GameObject trashBall = collision.gameObject;
             float trashBallWeight = trashBall.GetComponent<Rigidbody2D>().mass; // It is the mass of the trashball that counts for the completion purposes
             Debug.Log("trashBall weight : " + trashBallWeight);
-
-            if (trashBallWeight >= minTrashRequired) // Minimum completion
+            currentCompletion += trashBallWeight;
+            if (currentCompletion >= minTrashRequired) // Minimum completion
             {
                 TMProObject.SetActive(true);
                 TMProText.text = "GG!";
 
-                if (trashBallWeight >= goldMedalRequired) // Maximum completion
+                if (currentCompletion >= goldMedalRequired) // Maximum completion
                 {
                     TMProText.text = "INCREDIBLE!";
                 }
