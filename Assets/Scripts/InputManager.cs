@@ -27,30 +27,35 @@ public class InputManager : MonoBehaviour {
         return Input.GetKeyDown(KeyCode.Keypad4);
     }
 
-    public static bool ReleaseArrow()
-    {
-        if (Input.GetKeyUp(KeyCode.RightArrow)) return true;
-        else if (Input.GetKeyUp(KeyCode.LeftArrow)) return true;
-        else return false;
-    }
+//    public static bool ReleaseArrow()
+//    {
+//        if (Input.GetKeyUp(KeyCode.RightArrow)) return true;
+//        else if (Input.GetKeyUp(KeyCode.LeftArrow)) return true;
+//        else return false;
+//    }
 
     public static bool PressSpace()
     {
-        return Input.GetKeyDown(KeyCode.Space);
+        return Input.GetButtonDown("Jump");
     }
 
     public static bool PressUp()
     {
-        return Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Z);
+        return Input.GetButtonDown("Interaction");
     }
 
     public static bool PressLeftCtrl()
     {
-        return Input.GetKey(KeyCode.LeftShift);
+        return Input.GetButton("NoTrash");
     }
 
     public static bool PressRKey()
     {
-        return Input.GetKeyDown(KeyCode.R);
+        return Input.GetButtonDown("Restart");
+    }
+
+    public static bool PressPause()
+    {
+        return Input.GetButtonDown("Pause");
     }
 }

@@ -18,6 +18,8 @@ public class CameraManager : MonoBehaviour {
     private List<GameObject> camDestinations = new List<GameObject>(); // The list of destination points
     private int camDestIndex;
 
+    public GameController gameController;
+
     private void Update ()
     {
         if (isMenu) return;
@@ -58,7 +60,7 @@ public class CameraManager : MonoBehaviour {
     {
         if (camDestIndex < camDestinations.Count)
         {
-            if (camDestinations[camDestIndex] == null) return;
+            if (!camDestinations[camDestIndex]) return;
             Vector3 currDestination = camDestinations[camDestIndex].transform.position;
             Vector3 currDestinationWithOffset = new Vector3(currDestination.x, currDestination.y, transform.position.z);
             transform.position = Vector3.Lerp(transform.position, currDestinationWithOffset, Time.deltaTime);
@@ -72,7 +74,11 @@ public class CameraManager : MonoBehaviour {
         {
             transform.position = Vector3.Lerp(transform.position, player.transform.position, Time.deltaTime);
             float dist = Vector3.Distance(transform.position, player.transform.position);
-            if(dist <= 1.2f) isReadyToMove = false;
+            if (dist <= 1.2f)
+            {
+                isReadyToMove = false;
+                gameController.isPaused = false;
+            }
         }
     }
 

@@ -29,16 +29,22 @@ public class PlayerController : MonoBehaviour {
     public LayerMask floorLayer;
 
     private LevelManager levelManager;
+    private GameController gameController;
 
 	private void Start ()
     {
         trashBallOffset = transform.GetChild(0).gameObject;
         rb = GetComponent<Rigidbody2D>();
-        //levelManager = GameController.GetCurrentLevelManager();
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
 	
 	private void FixedUpdate ()
     {
+        if (gameController.isPaused)
+        {
+            
+            return;
+        }
         //Expand the following region to know more about the input events
         #region Inputs
         if (InputManager.hAxis>0)
@@ -59,7 +65,7 @@ public class PlayerController : MonoBehaviour {
                 Flip();
             }
         }
-        if(InputManager.ReleaseArrow())
+        else if(InputManager.hAxis > -0.1f && InputManager.hAxis < 0.1f)
         {
             Brake();
         }
@@ -121,7 +127,6 @@ public class PlayerController : MonoBehaviour {
 
     private void Jump()
     {
-        //rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * jumpForce);
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         isJumping = true;
     }
@@ -155,6 +160,18 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    public void PausePlayer(bool pauseState)
+    {
+        rb.simulated = !pauseState;
+        foreach (GameObject activeTrashball in levelManager.trashToDestroy) //We want to disable the rigidbody of all the active trasballs
+        {
+            activeTrashball.GetComponent<Rigidbody2D>().isKinematic = pauseState;
+        }
+    }
+
+    //Expand this region to see the methods related to collision events
+    #region CollisionEvents
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         switch (other.gameObject.tag)
@@ -187,6 +204,8 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    #endregion
+    
     public void SetLevelManager(LevelManager newLevelManager)
     {
         levelManager = newLevelManager;

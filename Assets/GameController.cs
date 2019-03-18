@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,6 +18,7 @@ public class GameController : MonoBehaviour {
 
     public GameObject canvasObject;
     public GameObject menuGameObject;
+    public GameObject pauseObject;
 
     public CameraManager camManager;
 
@@ -43,12 +45,12 @@ public class GameController : MonoBehaviour {
         if (InputManager.PressNextLevel()) SwitchToOtherLevel(1);
         if (InputManager.PressPrevLevel()) SwitchToOtherLevel(-1);
         if (InputManager.PressRKey()) SceneManager.LoadScene(0);
+        if (InputManager.PressPause()) PauseGame();
     }
 	
 	public void InitiateFirstLevel(int idSelector)
     {
         currentLevel = Instantiate(levels[idSelector].gameObject);
-        //currentPlayer = Instantiate(player, levels[startingLevelID].playerSpawn.transform.position, Quaternion.identity);
         currentPlayer = player;
         currentPlayer.transform.position = levels[idSelector].playerSpawn.transform.position;
         currentLevelManager = currentLevel.GetComponent<LevelManager>();
@@ -64,6 +66,7 @@ public class GameController : MonoBehaviour {
             camManager.AssignCameraPosition();
             camManager.FillDestinationList(currentLevelManager.camPoints);
             camManager.isReadyToMove = true;
+            isPaused = true;
         }
         else
         {
@@ -78,6 +81,13 @@ public class GameController : MonoBehaviour {
         menuGameObject.SetActive(false);
         camManager.isMenu = false;
         InitiateCamera(publicPlayTest);
+    }
+
+    private void PauseGame()
+    {
+        isPaused = !isPaused;
+        pauseObject.SetActive(isPaused);
+        player.GetComponent<PlayerController>().PausePlayer(isPaused);
     }
 
     private void SwitchToOtherLevel(int selector)
