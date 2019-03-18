@@ -12,6 +12,7 @@ public class CameraManager : MonoBehaviour {
     private float playerYPos;
     private float cameraYpos;
 
+    public bool isMenu;
     public bool isReadyToMove; // This boolean is toggled by the GameController. it makes the cam reach destinations so that the player discovers the level before playing it
 
     private List<GameObject> camDestinations = new List<GameObject>(); // The list of destination points
@@ -19,6 +20,7 @@ public class CameraManager : MonoBehaviour {
 
     private void Update ()
     {
+        if (isMenu) return;
         if(isReadyToMove)
         {
             MoveToNewPosition();
@@ -26,6 +28,7 @@ public class CameraManager : MonoBehaviour {
         else // After moving to the different level destinations the camera gets back to the player
         {
             cameraYpos = transform.position.y;
+            if (!Camera.main) return;
             Vector3 playViewportPos = Camera.main.WorldToViewportPoint(player.transform.position);
             CenterOnPlayer(playViewportPos);
         }

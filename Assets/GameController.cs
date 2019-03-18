@@ -7,7 +7,8 @@ public class GameController : MonoBehaviour {
 
 
     public bool publicPlayTest;
-    public static bool playTest;
+    public bool noMenu;
+    public bool isPaused;
     public List<LevelManager> levels = new List<LevelManager>();
     private static LevelManager currentLevelManager;
     public int startingLevelID;
@@ -15,25 +16,50 @@ public class GameController : MonoBehaviour {
     public int currentLevelID;
 
     public GameObject canvasObject;
+    public GameObject menuGameObject;
 
     public CameraManager camManager;
 
     public GameObject player;
     private GameObject currentPlayer;
 
-	void Start ()
+	private void Start ()
     {
         canvasObject.SetActive(true);
-        playTest = publicPlayTest;
-        if(!playTest)
+        if (noMenu)
         {
-            currentLevel = Instantiate(levels[startingLevelID].gameObject);
-            //currentPlayer = Instantiate(player, levels[startingLevelID].playerSpawn.transform.position, Quaternion.identity);
-            currentPlayer = player;
-            currentPlayer.transform.position = levels[startingLevelID].playerSpawn.transform.position;
-            currentLevelManager = currentLevel.GetComponent<LevelManager>();
-            currentPlayer.GetComponent<PlayerController>().SetLevelManager(currentLevelManager);
-            currentLevelID = startingLevelID;
+            if(!publicPlayTest) InitiateFirstLevel(startingLevelID);
+            InitiateCamera(publicPlayTest);
+        }
+        else
+        {
+            menuGameObject.SetActive(true);
+            camManager.isMenu = true;
+        }
+    }
+	
+	private void Update ()
+    {
+        if (InputManager.PressNextLevel()) SwitchToOtherLevel(1);
+        if (InputManager.PressPrevLevel()) SwitchToOtherLevel(-1);
+        if (InputManager.PressRKey()) SceneManager.LoadScene(0);
+    }
+	
+	public void InitiateFirstLevel(int idSelector)
+    {
+        currentLevel = Instantiate(levels[idSelector].gameObject);
+        //currentPlayer = Instantiate(player, levels[startingLevelID].playerSpawn.transform.position, Quaternion.identity);
+        currentPlayer = player;
+        currentPlayer.transform.position = levels[idSelector].playerSpawn.transform.position;
+        currentLevelManager = currentLevel.GetComponent<LevelManager>();
+        currentPlayer.GetComponent<PlayerController>().SetLevelManager(currentLevelManager);
+        currentLevelID = idSelector;
+    }
+
+    private void InitiateCamera(bool isTest)
+    {
+        if (!isTest)
+        {
             camManager.player = currentPlayer;
             camManager.AssignCameraPosition();
             camManager.FillDestinationList(currentLevelManager.camPoints);
@@ -43,19 +69,18 @@ public class GameController : MonoBehaviour {
         {
             camManager.player = player;
             camManager.AssignCameraPosition();
+            Debug.Log("test mode camera");
         }
-
-
     }
-	
-	void Update ()
+
+    public void CloseMenu()
     {
-        if (InputManager.PressNextLevel()) SwitchToOtherLevel(1);
-        if (InputManager.PressPrevLevel()) SwitchToOtherLevel(-1);
-        if (InputManager.PressRKey()) SceneManager.LoadScene(0);
+        menuGameObject.SetActive(false);
+        camManager.isMenu = false;
+        InitiateCamera(publicPlayTest);
     }
 
-    public void SwitchToOtherLevel(int selector)
+    private void SwitchToOtherLevel(int selector)
     {
         currentLevelManager.ClearScene();
         Destroy(currentLevel);
@@ -70,6 +95,11 @@ public class GameController : MonoBehaviour {
         currentPlayer.GetComponent<PlayerController>().SetLevelManager(currentLevelManager);
         camManager.FillDestinationList(currentLevelManager.camPoints);
         camManager.isReadyToMove = true;
+    }
+
+    public void QuitApplication()
+    {
+        Application.Quit();
     }
 
     public static LevelManager GetCurrentLevelManager()

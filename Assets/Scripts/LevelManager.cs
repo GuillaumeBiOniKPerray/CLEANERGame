@@ -40,7 +40,8 @@ public class LevelManager : MonoBehaviour {
     private GameObject souvenir; //The code will try to find if the is a souvenir on the map
     [Tooltip("Put here the prefab the Souvenir_Text")]
     public GameObject souvenirUI; 
-    private TextMeshProUGUI souvenirText; //This component will allow us to tell the player wether he took the souvenir or not
+    private TextMeshProUGUI souvenirText; //This component will allow us to tell the player whether he took the souvenir or not
+    private bool hasSouvenir;
 
     //Player related variables
     public GameObject player;
@@ -62,13 +63,22 @@ public class LevelManager : MonoBehaviour {
         numberOfTrashInLevel = totalTrash.transform.childCount;
         
         canvas = GameObject.Find("Canvas").transform;
-        souvenir = GameObject.Find("Souvenir");
-        if (souvenir) // All levels don't have souvenir (yet), so when'there's one, the UI components appears
-        {
-            GameObject souvGO = Instantiate(souvenirUI, canvas);
-            souvenirText = souvGO.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-        }
+        FindSouvenirGameObject();
         progressionBar = canvas.transform.GetChild(1).GetChild(0).gameObject; // The progression bar is a children BE CAREFUL!
+        progressionBar.transform.parent.gameObject.SetActive(true);
+    }
+
+    private void FindSouvenirGameObject() // All levels don't have souvenir (yet), so when there's one, we cycle through the level elements to catch the souvenir
+    {
+        foreach (Transform levelChild in transform)
+        {
+            if (levelChild.gameObject.name == "Souvenir")
+            {
+                hasSouvenir = true;
+                GameObject souvGo = Instantiate(souvenirUI, canvas);
+                souvenirText = souvGo.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+            }
+        }
     }
 
     public void SetNumberOfTrashCollected() // Updates the progression bar size (not final)
@@ -95,7 +105,6 @@ public class LevelManager : MonoBehaviour {
 
     public void AddToTrashToDestroy(GameObject trash)
     {
-        Debug.Log("Add this to trash : " + trash);
         trashToDestroy.Add(trash);
     }
 
@@ -103,8 +112,12 @@ public class LevelManager : MonoBehaviour {
     {
         progressionBar.transform.localScale = new Vector3(0, progressionBar.transform.localScale.y, progressionBar.transform.localScale.z);
         endZone.ClearUI();
-        souvenirText.text = "0 / 1";
-        souvenirText.gameObject.SetActive(false);
+        if (hasSouvenir)
+        {
+            souvenirText.text = "0 / 1";
+            souvenirText.transform.parent.gameObject.SetActive(false);
+            hasSouvenir = false;
+        }
         foreach (GameObject trsh in trashToDestroy)
         {
             Debug.Log("trash to destroy : " + trsh);
