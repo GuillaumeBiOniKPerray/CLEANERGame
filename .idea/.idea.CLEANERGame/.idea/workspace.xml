@@ -2,7 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b5e4356-6b43-459e-9923-8bc616d6af17" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CLEANERGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CLEANERGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/End_Game.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/End_Game.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_01.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_02.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_03.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_04.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_04.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_05.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_05.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_06.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_06.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_07.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_07.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_08.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_08.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_09.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_09.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/Lvl_10.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LD_Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LD_Test.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EndZoneScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EndZoneScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Arrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Bloc_1x1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Bloc_1x1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Button.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Circle_Sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Circle_Sprite.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Curve_2x1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Curve_2x1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Curve_3x1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Curve_3x1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Curve_4x2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Curve_4x2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Curve_6x2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Curve_6x2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Floor_Square.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Floor_Square.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Floor_Square_Test.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Floor_Square_Test.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Lifter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Lifter.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Lifter_Console.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Lifter_Console.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/MovingPlateform_Plateform.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/MovingPlateform_Plateform.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/MovingPlaterform_Support.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/MovingPlaterform_Support.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Plateform_1x1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Plateform_1x1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Plateform_1x1_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Plateform_1x1_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Plateform_1x1_Vert.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Plateform_1x1_Vert.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Slope_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Slope_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Slope_2x1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Slope_2x1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Slope_3x1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Slope_3x1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Slope_4x2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Slope_4x2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Slope_6x2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Slope_6x2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Square_PivotTL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Square_PivotTL.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,22 +72,72 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/EndZoneScript.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="618">
-              <caret line="61" column="39" lean-forward="true" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+            <state relative-caret-position="90">
+              <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
               <folding>
-                <marker date="1552930055394" expanded="false" signature="6:113" ph="..." />
-                <marker date="1552930055394" expanded="true" signature="158:2741" ph="{...}" />
-                <marker date="1552930055394" expanded="true" signature="165:756" ph="/* The endzone is the incinerator, it destroys the trash accumulated during the completion of the level. ... */" />
-                <marker date="1552930055394" expanded="true" signature="1063:1828" ph="{...}" />
-                <marker date="1552930055394" expanded="true" signature="1214:1320" ph="{...}" />
-                <marker date="1552930055394" expanded="true" signature="1855:1905" ph="{...}" />
-                <marker date="1552930055394" expanded="true" signature="1962:2739" ph="{...}" />
-                <marker date="1552930055394" expanded="true" signature="2026:2733" ph="{...}" />
-                <marker date="1552930055394" expanded="true" signature="2439:2723" ph="{...}" />
-                <marker date="1552930055394" expanded="true" signature="2621:2709" ph="{...}" />
+                <marker date="1553011652803" expanded="false" signature="6:113" ph="..." />
+                <marker date="1553011652803" expanded="true" signature="158:3025" ph="{...}" />
+                <marker date="1553011652803" expanded="true" signature="165:756" ph="/* The endzone is the incinerator, it destroys the trash accumulated during the completion of the level. ... */" />
+                <marker date="1553011652803" expanded="true" signature="1063:1828" ph="{...}" />
+                <marker date="1553011652803" expanded="true" signature="1214:1320" ph="{...}" />
+                <marker date="1553011652803" expanded="true" signature="1855:1905" ph="{...}" />
+                <marker date="1553011652803" expanded="true" signature="1962:2378" ph="{...}" />
+                <marker date="1553011652803" expanded="true" signature="2026:2372" ph="{...}" />
+                <marker date="1553011652803" expanded="true" signature="2409:2906" ph="{...}" />
+                <marker date="1553011652803" expanded="true" signature="2525:2749" ph="{...}" />
+                <marker date="1553011652803" expanded="true" signature="2663:2739" ph="{...}" />
+                <marker date="1553011652803" expanded="true" signature="2762:2900" ph="{...}" />
+                <marker date="1553011652803" expanded="true" signature="2948:3023" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/LevelManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1632">
+              <caret line="113" column="11" selection-start-line="113" selection-start-column="11" selection-end-line="113" selection-end-column="11" />
+              <folding>
+                <marker date="1552917946449" expanded="false" signature="6:113" ph="..." />
+                <marker date="1552917946449" expanded="true" signature="157:4723" ph="{...}" />
+                <marker date="1552917946449" expanded="true" signature="164:698" ph="/* To create a Level there are some rules to follow : ... */" />
+                <marker date="1552917946449" expanded="true" signature="1924:2635" ph="{...}" />
+                <marker date="1552917946449" expanded="true" signature="2798:3166" ph="{...}" />
+                <marker date="1552917946449" expanded="true" signature="2856:3160" ph="{...}" />
+                <marker date="1552917946449" expanded="true" signature="2924:3150" ph="{...}" />
+                <marker date="1552917946449" expanded="true" signature="3259:3574" ph="{...}" />
+                <marker date="1552917946449" expanded="true" signature="3608:3657" ph="{...}" />
+                <marker date="1552917946449" expanded="true" signature="3740:3935" ph="{...}" />
+                <marker date="1552917946449" expanded="true" signature="3803:3899" ph="{...}" />
+                <marker date="1552917946449" expanded="true" signature="3990:4037" ph="{...}" />
+                <marker date="1552917946449" expanded="true" signature="4164:4721" ph="{...}" />
+                <marker date="1552917946449" expanded="true" signature="4362:4527" ph="{...}" />
+                <marker date="1552917946449" expanded="true" signature="4579:4679" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/EndGameConsole.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="704">
+              <caret line="47" selection-start-line="47" selection-end-line="47" />
+              <folding>
+                <marker date="1553009202886" expanded="false" signature="6:113" ph="..." />
+                <marker date="1553009202886" expanded="true" signature="158:1006" ph="{...}" />
+                <marker date="1553009202886" expanded="true" signature="257:335" ph="{...}" />
+                <marker date="1553009202886" expanded="true" signature="362:499" ph="{...}" />
+                <marker date="1553009202886" expanded="true" signature="438:493" ph="{...}" />
+                <marker date="1553009202886" expanded="true" signature="505:1004" ph="MyRegion" />
+                <marker date="1553009202886" expanded="true" signature="581:758" ph="{...}" />
+                <marker date="1553009202886" expanded="true" signature="638:752" ph="{...}" />
+                <marker date="1553009202886" expanded="true" signature="810:988" ph="{...}" />
+                <marker date="1553009202886" expanded="true" signature="867:983" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -42,6 +152,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/EndZoneScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelSelectionManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EndGameConsole.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ClickableLevelIcon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -58,6 +169,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/CameraManager.cs" />
         <option value="$PROJECT_DIR$/Assets/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EndGameConsole.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EndZoneScript.cs" />
       </list>
     </option>
@@ -73,14 +185,14 @@
     </navigator>
     <panes>
       <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -126,12 +238,13 @@
       <option name="presentableId" value="Default" />
       <updated>1552898310396</updated>
       <workItem from="1552898337821" duration="2897000" />
-      <workItem from="1552915479185" duration="10868000" />
+      <workItem from="1552915479185" duration="10914000" />
+      <workItem from="1553007852443" duration="2755000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13765000" />
+    <option name="totallyTimeSpent" value="16566000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -146,7 +259,7 @@
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12473348" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12579957" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -255,30 +368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/LevelManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198">
-          <caret line="67" column="65" selection-start-line="67" selection-start-column="65" selection-end-line="67" selection-end-column="65" />
-          <folding>
-            <marker date="1552917946449" expanded="false" signature="6:113" ph="..." />
-            <marker date="1552917946449" expanded="true" signature="157:4723" ph="{...}" />
-            <marker date="1552917946449" expanded="true" signature="164:698" ph="/* To create a Level there are some rules to follow : ... */" />
-            <marker date="1552917946449" expanded="true" signature="1924:2635" ph="{...}" />
-            <marker date="1552917946449" expanded="true" signature="2798:3166" ph="{...}" />
-            <marker date="1552917946449" expanded="true" signature="2856:3160" ph="{...}" />
-            <marker date="1552917946449" expanded="true" signature="2924:3150" ph="{...}" />
-            <marker date="1552917946449" expanded="true" signature="3259:3574" ph="{...}" />
-            <marker date="1552917946449" expanded="true" signature="3608:3657" ph="{...}" />
-            <marker date="1552917946449" expanded="true" signature="3740:3935" ph="{...}" />
-            <marker date="1552917946449" expanded="true" signature="3803:3899" ph="{...}" />
-            <marker date="1552917946449" expanded="true" signature="3990:4037" ph="{...}" />
-            <marker date="1552917946449" expanded="true" signature="4164:4721" ph="{...}" />
-            <marker date="1552917946449" expanded="true" signature="4362:4527" ph="{...}" />
-            <marker date="1552917946449" expanded="true" signature="4579:4679" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/CameraManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -349,21 +438,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/EndGameConsole.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <marker date="1553009202886" expanded="false" signature="6:113" ph="..." />
+            <marker date="1553009202886" expanded="true" signature="158:1006" ph="{...}" />
+            <marker date="1553009202886" expanded="true" signature="257:335" ph="{...}" />
+            <marker date="1553009202886" expanded="true" signature="362:499" ph="{...}" />
+            <marker date="1553009202886" expanded="true" signature="438:493" ph="{...}" />
+            <marker date="1553009202886" expanded="true" signature="505:1004" ph="MyRegion" />
+            <marker date="1553009202886" expanded="true" signature="581:758" ph="{...}" />
+            <marker date="1553009202886" expanded="true" signature="638:752" ph="{...}" />
+            <marker date="1553009202886" expanded="true" signature="810:988" ph="{...}" />
+            <marker date="1553009202886" expanded="true" signature="867:983" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/EndZoneScript.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="61" column="39" lean-forward="true" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+        <state relative-caret-position="90">
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
           <folding>
-            <marker date="1552930055394" expanded="false" signature="6:113" ph="..." />
-            <marker date="1552930055394" expanded="true" signature="158:2741" ph="{...}" />
-            <marker date="1552930055394" expanded="true" signature="165:756" ph="/* The endzone is the incinerator, it destroys the trash accumulated during the completion of the level. ... */" />
-            <marker date="1552930055394" expanded="true" signature="1063:1828" ph="{...}" />
-            <marker date="1552930055394" expanded="true" signature="1214:1320" ph="{...}" />
-            <marker date="1552930055394" expanded="true" signature="1855:1905" ph="{...}" />
-            <marker date="1552930055394" expanded="true" signature="1962:2739" ph="{...}" />
-            <marker date="1552930055394" expanded="true" signature="2026:2733" ph="{...}" />
-            <marker date="1552930055394" expanded="true" signature="2439:2723" ph="{...}" />
-            <marker date="1552930055394" expanded="true" signature="2621:2709" ph="{...}" />
+            <marker date="1553011652803" expanded="false" signature="6:113" ph="..." />
+            <marker date="1553011652803" expanded="true" signature="158:3025" ph="{...}" />
+            <marker date="1553011652803" expanded="true" signature="165:756" ph="/* The endzone is the incinerator, it destroys the trash accumulated during the completion of the level. ... */" />
+            <marker date="1553011652803" expanded="true" signature="1063:1828" ph="{...}" />
+            <marker date="1553011652803" expanded="true" signature="1214:1320" ph="{...}" />
+            <marker date="1553011652803" expanded="true" signature="1855:1905" ph="{...}" />
+            <marker date="1553011652803" expanded="true" signature="1962:2378" ph="{...}" />
+            <marker date="1553011652803" expanded="true" signature="2026:2372" ph="{...}" />
+            <marker date="1553011652803" expanded="true" signature="2409:2906" ph="{...}" />
+            <marker date="1553011652803" expanded="true" signature="2525:2749" ph="{...}" />
+            <marker date="1553011652803" expanded="true" signature="2663:2739" ph="{...}" />
+            <marker date="1553011652803" expanded="true" signature="2762:2900" ph="{...}" />
+            <marker date="1553011652803" expanded="true" signature="2948:3023" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/LevelManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1632">
+          <caret line="113" column="11" selection-start-line="113" selection-start-column="11" selection-end-line="113" selection-end-column="11" />
+          <folding>
+            <marker date="1552917946449" expanded="false" signature="6:113" ph="..." />
+            <marker date="1552917946449" expanded="true" signature="157:4723" ph="{...}" />
+            <marker date="1552917946449" expanded="true" signature="164:698" ph="/* To create a Level there are some rules to follow : ... */" />
+            <marker date="1552917946449" expanded="true" signature="1924:2635" ph="{...}" />
+            <marker date="1552917946449" expanded="true" signature="2798:3166" ph="{...}" />
+            <marker date="1552917946449" expanded="true" signature="2856:3160" ph="{...}" />
+            <marker date="1552917946449" expanded="true" signature="2924:3150" ph="{...}" />
+            <marker date="1552917946449" expanded="true" signature="3259:3574" ph="{...}" />
+            <marker date="1552917946449" expanded="true" signature="3608:3657" ph="{...}" />
+            <marker date="1552917946449" expanded="true" signature="3740:3935" ph="{...}" />
+            <marker date="1552917946449" expanded="true" signature="3803:3899" ph="{...}" />
+            <marker date="1552917946449" expanded="true" signature="3990:4037" ph="{...}" />
+            <marker date="1552917946449" expanded="true" signature="4164:4721" ph="{...}" />
+            <marker date="1552917946449" expanded="true" signature="4362:4527" ph="{...}" />
+            <marker date="1552917946449" expanded="true" signature="4579:4679" ph="{...}" />
           </folding>
         </state>
       </provider>

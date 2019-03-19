@@ -16,6 +16,7 @@
           <e p="ConveyorConsole_Script.cs" t="Include" />
           <e p="Door_Script.cs" t="Include" />
           <e p="EatAndBeingEaten.cs" t="Include" />
+          <e p="EndGameConsole.cs" t="Include" />
           <e p="EndZoneScript.cs" t="Include" />
           <e p="InputManager.cs" t="Include" />
           <e p="LevelManager.cs" t="Include" />

@@ -56,16 +56,32 @@ public class EndZoneScript : MonoBehaviour {
             float trashBallWeight = trashBall.GetComponent<Rigidbody2D>().mass; // It is the mass of the trashball that counts for the completion purposes
             Debug.Log("trashBall weight : " + trashBallWeight);
             currentCompletion += trashBallWeight;
-            if (currentCompletion >= minTrashRequired) // Minimum completion
-            {
-                TMProObject.SetActive(true);
-                TMProText.text = "GG!";
+        }
+    }
 
-                if (currentCompletion >= goldMedalRequired) // Maximum completion
-                {
-                    TMProText.text = "INCREDIBLE!";
-                }
+    public void FinishLevel()
+    {
+        TMProObject.SetActive(true);
+        if (currentCompletion >= minTrashRequired) // Minimum completion
+        {
+            
+            TMProText.text = "GG!";
+
+            if (currentCompletion >= goldMedalRequired) // Maximum completion
+            {
+                TMProText.text = "INCREDIBLE!";
             }
         }
+        else
+        {
+            TMProText.text = "There are some trash left in this area!";
+            StartCoroutine(DelayedDestroy());
+        }
+    }
+
+    private IEnumerator DelayedDestroy()
+    {
+        yield return new WaitForSeconds(4);
+        ClearUI();
     }
 }
