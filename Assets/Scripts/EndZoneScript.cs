@@ -64,6 +64,7 @@ public class EndZoneScript : MonoBehaviour {
     {
 //        TMProObject.SetActive(false);
         endGamePanel.SetActive(false);
+        endGamePanel.transform.GetChild(1).gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -85,7 +86,10 @@ public class EndZoneScript : MonoBehaviour {
             endGameMessage.text = "Presque parfait.";
             endGamePanel.SetActive(true);
             SetProgressionLevel();
-//            gameController.PauseGame();
+            if (levelManager.hasSouvenir)
+            {
+                endGamePanel.transform.GetChild(1).gameObject.SetActive(true);
+            }
             if (currentCompletion >= goldMedalRequired) // Maximum completion
             {
                 endGameMessage.text = "Le Secteur est propre!";

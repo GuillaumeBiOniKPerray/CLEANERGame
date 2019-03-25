@@ -44,7 +44,7 @@ public class GameController : MonoBehaviour {
     {
         if (InputManager.PressNextLevel()) SwitchToOtherLevel(1);
         if (InputManager.PressPrevLevel()) SwitchToOtherLevel(-1);
-        if (InputManager.PressRKey()) RestartScene();
+        if (InputManager.PressRKey()) GoToOtherLevel(currentLevelID);
         if (InputManager.PressPause()) PauseGame();
     }
 	
@@ -95,6 +95,10 @@ public class GameController : MonoBehaviour {
     public void GoToMainMenu()
     {
         // TODO : Save progression
+        if (isPaused)
+        {
+            PauseGame();
+        }
         currentLevelManager.ClearScene();
         Destroy(currentLevel);
         menuGameObject.SetActive(true);
@@ -122,6 +126,10 @@ public class GameController : MonoBehaviour {
     
     public void GoToOtherLevel(int levelID)
     {
+        if (isPaused)
+        {
+            PauseGame();
+        }
         currentLevelManager.ClearScene();
         Destroy(currentLevel);
         isPaused = true;

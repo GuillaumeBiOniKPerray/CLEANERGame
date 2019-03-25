@@ -41,7 +41,7 @@ public class LevelManager : MonoBehaviour {
     [Tooltip("Put here the prefab the Souvenir_Text")]
     public GameObject souvenirUI; 
     private TextMeshProUGUI souvenirText; //This component will allow us to tell the player whether he took the souvenir or not
-    private bool hasSouvenir;
+    public bool hasSouvenir;
 
     //Player related variables
     public GameObject player;
