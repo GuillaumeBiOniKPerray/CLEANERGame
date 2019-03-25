@@ -56,6 +56,7 @@ public class GameController : MonoBehaviour {
         currentLevelManager = currentLevel.GetComponent<LevelManager>();
         currentPlayer.GetComponent<PlayerController>().SetLevelManager(currentLevelManager);
         currentLevelID = idSelector;
+        player.SetActive(true);
     }
 
     private void InitiateCamera(bool isTest)
@@ -78,14 +79,27 @@ public class GameController : MonoBehaviour {
 
     public void CloseMenu()
     {
+        menuGameObject.transform.GetChild(0).gameObject.SetActive(true); // Main menu 
+        menuGameObject.transform.GetChild(1).gameObject.SetActive(false); // LevelSelection
         menuGameObject.SetActive(false);
         camManager.isMenu = false;
         InitiateCamera(publicPlayTest);
+        player.SetActive(true);
     }
 
     public void RestartScene()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void GoToMainMenu()
+    {
+        // TODO : Save progression
+        currentLevelManager.ClearScene();
+        Destroy(currentLevel);
+        menuGameObject.SetActive(true);
+        camManager.isMenu = true;
+        player.SetActive(false);
     }
     
     public void PauseGame()

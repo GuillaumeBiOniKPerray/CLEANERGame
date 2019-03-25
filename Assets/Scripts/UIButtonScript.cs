@@ -24,6 +24,6 @@ public class UIButtonScript : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        gameController.RestartScene();
+        gameController.GoToMainMenu();
     }
 }
