@@ -30,6 +30,7 @@
           <e p="TrashBallPhysicsConstraints.cs" t="Include" />
           <e p="TrashManager.cs" t="Include" />
           <e p="TrashSpawnerManager.cs" t="Include" />
+          <e p="UIButtonScript.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Resources" t="Include">

@@ -16616,7 +16616,7 @@ MonoBehaviour:
   camPoints:
   - {fileID: 1828273569027016}
   trashToDestroy: []
-  endZone: {fileID: 0}
+  endZone: {fileID: 3926253792237454720}
 --- !u!1 &1764131349536074
 GameObject:
   m_ObjectHideFlags: 0
@@ -20668,3 +20668,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4029509358881646942}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3926253792237454720 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114677328601722078, guid: 70bc15c2610030b49946125f1bbc9117,
+    type: 3}
+  m_PrefabInstance: {fileID: 4029509358881646942}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99fc70740f2ad1e4ba65d53ab1b0cacc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

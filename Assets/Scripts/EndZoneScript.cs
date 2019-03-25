@@ -9,31 +9,48 @@ public class EndZoneScript : MonoBehaviour {
     // The endzone is the incinerator, it destroys the trash accumulated during the completion of the level.
     // For the moment it only accept one ball.
     // There is already a completion system telling the player if he has fully completed the level or not!
-    // TODO : Make the endzone accept multiple trashballs
+    // The endzone can accept multiple trashball
     // TODO : Create an engame panel with the "star system"
     // TODO : Create a system on special levels to allow the loss of a given amount of trash -> boolean?
     // TODO : Player tells the system whenever he has finished the level by pressing the "Incinerator Button"
     
     private LevelManager levelManager;
-
+    private GameController gameController;
+    
     // UI variables
     private GameObject TMProObject;
     private TextMeshProUGUI TMProText;
+    private GameObject endGamePanel;
+    private GameObject enGameProgBar;
+    private Text progressionText;
+    private Text endGameMessage;
 
     // Completion variables
     private float minTrashRequired;
     private float goldMedalRequired;
 
-    private float currentCompletion;
+    public float currentCompletion;
 
 
     private void Start()
     {
         levelManager = transform.parent.GetComponent<LevelManager>();
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
         GameObject gameUI = GameObject.Find("Canvas");
         if (gameUI)
         {
             TMProObject = GameObject.Find("Canvas").transform.GetChild(0).gameObject;
+            foreach (Transform canvasChild in gameUI.transform)
+            {
+                if (canvasChild.name == "End_Game_Panel") // We then get the elements we require from the endgame object
+                {
+                    endGamePanel = canvasChild.gameObject;
+                    endGameMessage = endGamePanel.transform.GetChild(0).GetChild(1).gameObject.GetComponent<Text>();
+                    enGameProgBar = endGamePanel.transform.GetChild(0).GetChild(0).GetChild(0).gameObject;
+                    progressionText = endGamePanel.transform.GetChild(0).GetChild(0).GetChild(1).gameObject.GetComponent<Text>();
+                    Debug.Log("engamebar object: " + enGameProgBar);
+                }
+            }
         }
         else Debug.LogWarning("There is no Canvas on the scene! Go pick it in the prefab folder");
         goldMedalRequired = levelManager.GetTotalNumberOfTrashInLevel();
@@ -45,7 +62,8 @@ public class EndZoneScript : MonoBehaviour {
 
     public void ClearUI()
     {
-        TMProObject.SetActive(false);
+//        TMProObject.SetActive(false);
+        endGamePanel.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -54,27 +72,28 @@ public class EndZoneScript : MonoBehaviour {
         {
             GameObject trashBall = collision.gameObject;
             float trashBallWeight = trashBall.GetComponent<Rigidbody2D>().mass; // It is the mass of the trashball that counts for the completion purposes
-            Debug.Log("trashBall weight : " + trashBallWeight);
+//            Debug.Log("trashBall weight : " + trashBallWeight);
             currentCompletion += trashBallWeight;
         }
     }
 
     public void FinishLevel()
     {
-        TMProObject.SetActive(true);
+//        TMProObject.SetActive(true);
         if (currentCompletion >= minTrashRequired) // Minimum completion
         {
-            
-            TMProText.text = "GG!";
-
+            endGameMessage.text = "Presque parfait.";
+            endGamePanel.SetActive(true);
+            SetProgressionLevel();
+//            gameController.PauseGame();
             if (currentCompletion >= goldMedalRequired) // Maximum completion
             {
-                TMProText.text = "INCREDIBLE!";
+                endGameMessage.text = "Le Secteur est propre!";
             }
         }
         else
         {
-            TMProText.text = "There are some trash left in this area!";
+            TMProText.text = "Il reste des déchets dans ce secteur.";
             StartCoroutine(DelayedDestroy());
         }
     }
@@ -84,4 +103,15 @@ public class EndZoneScript : MonoBehaviour {
         yield return new WaitForSeconds(4);
         ClearUI();
     }
+
+    private void SetProgressionLevel()
+    {
+        float completion = currentCompletion / goldMedalRequired;
+        Debug.Log("completion level : " + completion);
+        Vector3 progressBarCurrScale = enGameProgBar.transform.localScale;
+        Vector3 progressBarNewScale = new Vector3(completion, progressBarCurrScale.y, progressBarCurrScale.z);
+        progressionText.text = (completion * 100) + " %";
+        enGameProgBar.transform.localScale = progressBarNewScale;
+    }
+    
 }

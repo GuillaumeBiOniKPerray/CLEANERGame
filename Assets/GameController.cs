@@ -44,7 +44,7 @@ public class GameController : MonoBehaviour {
     {
         if (InputManager.PressNextLevel()) SwitchToOtherLevel(1);
         if (InputManager.PressPrevLevel()) SwitchToOtherLevel(-1);
-        if (InputManager.PressRKey()) SceneManager.LoadScene(0);
+        if (InputManager.PressRKey()) RestartScene();
         if (InputManager.PressPause()) PauseGame();
     }
 	
@@ -83,7 +83,12 @@ public class GameController : MonoBehaviour {
         InitiateCamera(publicPlayTest);
     }
 
-    private void PauseGame()
+    public void RestartScene()
+    {
+        SceneManager.LoadScene(0);
+    }
+    
+    public void PauseGame()
     {
         isPaused = !isPaused;
         pauseObject.SetActive(isPaused);
@@ -98,7 +103,20 @@ public class GameController : MonoBehaviour {
         if (currentLevelID + selector < 0) nextLevelID = 0;
         else if (currentLevelID + selector > levels.Count -1) nextLevelID = 0;
         else nextLevelID = currentLevelID + selector;
-        currentLevelID = nextLevelID;
+        SetLevel(nextLevelID);
+    }
+    
+    public void GoToOtherLevel(int levelID)
+    {
+        currentLevelManager.ClearScene();
+        Destroy(currentLevel);
+        isPaused = true;
+        SetLevel(levelID);
+    }
+
+    private void SetLevel(int id)
+    {
+        currentLevelID = id;
         currentLevel = Instantiate(levels[currentLevelID].gameObject);
         currentLevelManager = currentLevel.GetComponent<LevelManager>();
         currentPlayer.transform.position = levels[currentLevelID].playerSpawn.transform.position;
