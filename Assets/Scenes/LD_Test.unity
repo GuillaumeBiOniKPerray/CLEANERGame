@@ -472,6 +472,11 @@ PrefabInstance:
       propertyPath: gameController
       value: 
       objectReference: {fileID: 2067447644}
+    - target: {fileID: 114908494631499036, guid: bbc7b3c55eaa9604090f90ffe9e7d4d2,
+        type: 3}
+      propertyPath: camSpeed
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4173377371231542, guid: bbc7b3c55eaa9604090f90ffe9e7d4d2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

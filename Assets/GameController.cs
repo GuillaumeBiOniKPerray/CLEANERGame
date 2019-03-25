@@ -87,7 +87,7 @@ public class GameController : MonoBehaviour {
         player.SetActive(true);
     }
 
-    public void RestartScene()
+    private void RestartScene()
     {
         SceneManager.LoadScene(0);
     }

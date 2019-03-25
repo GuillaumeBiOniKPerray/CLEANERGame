@@ -14,7 +14,8 @@ public class CameraManager : MonoBehaviour {
 
     public bool isMenu;
     public bool isReadyToMove; // This boolean is toggled by the GameController. it makes the cam reach destinations so that the player discovers the level before playing it
-
+    public float camSpeed; //The speed of the camera
+    
     private List<GameObject> camDestinations = new List<GameObject>(); // The list of destination points
     private int camDestIndex;
 
@@ -63,7 +64,7 @@ public class CameraManager : MonoBehaviour {
             if (!camDestinations[camDestIndex]) return;
             Vector3 currDestination = camDestinations[camDestIndex].transform.position;
             Vector3 currDestinationWithOffset = new Vector3(currDestination.x, currDestination.y, transform.position.z);
-            transform.position = Vector3.Lerp(transform.position, currDestinationWithOffset, Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, currDestinationWithOffset, Time.deltaTime*camSpeed);
             float dist = Vector3.Distance(transform.position, currDestinationWithOffset);
             if (dist <= 1.2f) // In order to make the camera switch faster to the new destination, we add an offset to the desired destination's position
             {
@@ -72,7 +73,7 @@ public class CameraManager : MonoBehaviour {
         }
         else
         {
-            transform.position = Vector3.Lerp(transform.position, player.transform.position, Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, player.transform.position, Time.deltaTime*camSpeed);
             float dist = Vector3.Distance(transform.position, player.transform.position);
             if (dist <= 1.2f)
             {
