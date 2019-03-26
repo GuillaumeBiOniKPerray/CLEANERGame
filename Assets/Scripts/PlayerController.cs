@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,6 +29,14 @@ public class PlayerController : MonoBehaviour {
     public LayerMask trashBallLayer;
     public LayerMask floorLayer;
 
+    public enum PlayerState
+    {
+        PLAYING, PAUSED, NOMOVE
+    }
+
+    public PlayerState state;
+    
+    //System elements
     private LevelManager levelManager;
     private GameController gameController;
 
@@ -40,11 +49,8 @@ public class PlayerController : MonoBehaviour {
 	
 	private void FixedUpdate ()
     {
-        if (gameController.isPaused)
-        {
-            
-            return;
-        }
+        if (state == PlayerState.NOMOVE || state == PlayerState.PAUSED) return;
+        
         //Expand the following region to know more about the input events
         #region Inputs
         if (InputManager.hAxis>0)

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using TMPro;
 
@@ -8,49 +9,49 @@ public class TrashBallManager : MonoBehaviour {
     public float scaleFactor = 0.05f;
     public float massFactor = 0.05f;
 
-    Rigidbody2D rb;
-    float ownMass;
+    private Rigidbody2D rb;
+    private float ownMass;
 
     private TextMeshPro massText;
 
     private LevelManager levelManager;
 
-	void Start ()
+	private void Start ()
     {
         rb = GetComponent<Rigidbody2D>();
         levelManager = GameController.GetCurrentLevelManager();
         massText = transform.GetChild(0).GetComponent<TextMeshPro>();
     }
 	
-	void Update ()
+	private void Update ()
     {
         KeepTextRot();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag=="Dust")
+        switch (other.tag)
         {
-            TrashManager trash = other.GetComponent<TrashManager>();
-            int trashValue = trash.trashValue;
-            GrowTrashBall(other.gameObject, trashValue);
-            levelManager.SetNumberOfTrashCollected();
+            case "Dust":
+                TrashManager trash = other.GetComponent<TrashManager>();
+                int trashValue = trash.trashValue;
+                GrowTrashBall(other.gameObject, trashValue);
+                levelManager.SetNumberOfTrashCollected();
+                break;
+            case "Souvenir":
+                Destroy(other.gameObject);
+                break;
+            default:
+                break;
         }
-        if (other.tag == "Souvenir")
-        {
-            Destroy(other.gameObject);
-        }
-
     }
 
-    public void GrowTrashBall(GameObject toDestroy, int massScaleAmount)
+    private void GrowTrashBall(GameObject toDestroy, int massScaleAmount)
     {
-        //Debug.Log("amount given : " + amount);
         float scaleF = massScaleAmount / 100f;
-        //Debug.Log("scalefactor : " + scaleF);
         transform.localScale += new Vector3(scaleF, scaleF, scaleF);
         rb.mass += massScaleAmount;
-        if (toDestroy.tag == "Dust")
+        if (toDestroy.CompareTag("Dust"))
             Destroy(toDestroy.gameObject);
         else GetComponent<EatAndBeingEaten>().EatABall(toDestroy);
         if(rb.mass >= 10)
@@ -62,13 +63,13 @@ public class TrashBallManager : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Trashball")
+        if (collision.gameObject.CompareTag("Trashball"))
         {
             GameObject otherTrashball = collision.gameObject;
             Rigidbody2D otherTrashBallRB = otherTrashball.GetComponent<Rigidbody2D>();
             float otherTrashBallMass = otherTrashBallRB.mass;
             //Debug.Log("Other Trashball Mass : " + otherTrashBallMass);
-            TrashBallManager trashballManager = otherTrashball.GetComponent<TrashBallManager>();
+//            TrashBallManager trashballManager = otherTrashball.GetComponent<TrashBallManager>();
             if (otherTrashBallMass <= rb.mass / 2f)
             {
                 GrowTrashBall(otherTrashball, (int)otherTrashBallMass);

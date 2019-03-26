@@ -3879,6 +3879,8 @@ MonoBehaviour:
   numberOfTrashInLevel: 0
   numberOfCollectedTrash: 0
   souvenirUI: {fileID: 1085175751671434, guid: 671c66717e5a4b244a006daa3a1c86aa, type: 3}
+  hasSouvenir: 0
+  playerPickedSouvenir: 0
   player: {fileID: 1817954315855244, guid: 9a830c018f6ff4a48a916d8f302985d1, type: 3}
   playerSpawn: {fileID: 1833726292318714}
   camPoints:
@@ -18117,7 +18119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833726292318714}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10, y: -0.5, z: 0}
+  m_LocalPosition: {x: -10, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4107944664196198}

@@ -6698,6 +6698,8 @@ MonoBehaviour:
   numberOfTrashInLevel: 0
   numberOfCollectedTrash: 0
   souvenirUI: {fileID: 1085175751671434, guid: 671c66717e5a4b244a006daa3a1c86aa, type: 3}
+  hasSouvenir: 0
+  playerPickedSouvenir: 0
   player: {fileID: 1817954315855244, guid: 9a830c018f6ff4a48a916d8f302985d1, type: 3}
   playerSpawn: {fileID: 1988133085038134}
   camPoints:
@@ -15963,6 +15965,11 @@ PrefabInstance:
     - target: {fileID: 1980979018453064, guid: 70bc15c2610030b49946125f1bbc9117, type: 3}
       propertyPath: m_Name
       value: End_Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 114677328601722078, guid: 70bc15c2610030b49946125f1bbc9117,
+        type: 3}
+      propertyPath: impossibleMargin
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4764079648842276, guid: 70bc15c2610030b49946125f1bbc9117, type: 3}
       propertyPath: m_LocalPosition.x

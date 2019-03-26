@@ -17,17 +17,19 @@ public class GameController : MonoBehaviour {
     public int currentLevelID;
 
     public GameObject canvasObject;
-    public GameObject menuGameObject;
-    public GameObject pauseObject;
+//    public GameObject menuGameObject;
+//    public GameObject pauseObject;
 
     public CameraManager camManager;
 
     public GameObject player;
-    private GameObject currentPlayer;
+    public PlayerController playerController;
+//    private GameObject currentPlayer;
 
 	private void Start ()
     {
-        canvasObject.SetActive(true);
+        playerController = player.GetComponent<PlayerController>();
+        
         if (noMenu)
         {
             if(!publicPlayTest) InitiateFirstLevel(startingLevelID);
@@ -35,7 +37,7 @@ public class GameController : MonoBehaviour {
         }
         else
         {
-            menuGameObject.SetActive(true);
+            UIManager.GoToMainMenu();
             camManager.isMenu = true;
         }
     }
@@ -48,7 +50,7 @@ public class GameController : MonoBehaviour {
         if (InputManager.PressPause()) PauseGame();
     }
 	
-	public void InitiateFirstLevel(int idSelector)
+	/*public void InitiateFirstLevel(int idSelector)
     {
         currentLevel = Instantiate(levels[idSelector].gameObject);
         currentPlayer = player;
@@ -57,17 +59,27 @@ public class GameController : MonoBehaviour {
         currentPlayer.GetComponent<PlayerController>().SetLevelManager(currentLevelManager);
         currentLevelID = idSelector;
         player.SetActive(true);
+    }*/
+	
+    public void InitiateFirstLevel(int idSelector)
+    {
+        currentLevel = Instantiate(levels[idSelector].gameObject);
+        player.transform.position = levels[idSelector].playerSpawn.transform.position;
+        currentLevelManager = currentLevel.GetComponent<LevelManager>();
+        playerController.SetLevelManager(currentLevelManager);
+        currentLevelID = idSelector;
+        player.SetActive(true);
     }
 
     private void InitiateCamera(bool isTest)
     {
         if (!isTest)
         {
-            camManager.player = currentPlayer;
+            camManager.player = player;
             camManager.AssignCameraPosition();
             camManager.FillDestinationList(currentLevelManager.camPoints);
             camManager.isReadyToMove = true;
-            isPaused = true;
+            playerController.state = PlayerController.PlayerState.NOMOVE;
         }
         else
         {
@@ -79,9 +91,10 @@ public class GameController : MonoBehaviour {
 
     public void CloseMenu()
     {
-        menuGameObject.transform.GetChild(0).gameObject.SetActive(true); // Main menu 
-        menuGameObject.transform.GetChild(1).gameObject.SetActive(false); // LevelSelection
-        menuGameObject.SetActive(false);
+//        menuGameObject.transform.GetChild(0).gameObject.SetActive(true); // Main menu 
+//        menuGameObject.transform.GetChild(1).gameObject.SetActive(false); // LevelSelection
+//        menuGameObject.SetActive(false);
+        UIManager.GoToGame();
         camManager.isMenu = false;
         InitiateCamera(publicPlayTest);
         player.SetActive(true);
@@ -101,15 +114,18 @@ public class GameController : MonoBehaviour {
         }
         currentLevelManager.ClearScene();
         Destroy(currentLevel);
-        menuGameObject.SetActive(true);
+        UIManager.GoToMainMenu();
         camManager.isMenu = true;
         player.SetActive(false);
     }
     
     public void PauseGame()
     {
+        if(playerController.state == PlayerController.PlayerState.NOMOVE) return;
         isPaused = !isPaused;
-        pauseObject.SetActive(isPaused);
+        if (isPaused) playerController.state = PlayerController.PlayerState.PAUSED;
+        else playerController.state = PlayerController.PlayerState.PLAYING;
+        UIManager.ShowPausePanel(isPaused);
         player.GetComponent<PlayerController>().PausePlayer(isPaused);
     }
 
@@ -132,17 +148,31 @@ public class GameController : MonoBehaviour {
         }
         currentLevelManager.ClearScene();
         Destroy(currentLevel);
-        isPaused = true;
-        SetLevel(levelID);
+        playerController.state = PlayerController.PlayerState.NOMOVE;
+        if (levelID < levels.Count)
+        {
+            SetLevel(levelID);
+        }
     }
 
-    private void SetLevel(int id)
+    /*private void SetLevel(int id)
     {
         currentLevelID = id;
         currentLevel = Instantiate(levels[currentLevelID].gameObject);
         currentLevelManager = currentLevel.GetComponent<LevelManager>();
         currentPlayer.transform.position = levels[currentLevelID].playerSpawn.transform.position;
         currentPlayer.GetComponent<PlayerController>().SetLevelManager(currentLevelManager);
+        camManager.FillDestinationList(currentLevelManager.camPoints);
+        camManager.isReadyToMove = true;
+    }*/
+    
+    private void SetLevel(int id)
+    {
+        currentLevelID = id;
+        currentLevel = Instantiate(levels[currentLevelID].gameObject);
+        currentLevelManager = currentLevel.GetComponent<LevelManager>();
+        player.transform.position = levels[currentLevelID].playerSpawn.transform.position;
+        playerController.SetLevelManager(currentLevelManager);
         camManager.FillDestinationList(currentLevelManager.camPoints);
         camManager.isReadyToMove = true;
     }

@@ -42,6 +42,7 @@ public class LevelManager : MonoBehaviour {
     public GameObject souvenirUI; 
     private TextMeshProUGUI souvenirText; //This component will allow us to tell the player whether he took the souvenir or not
     public bool hasSouvenir;
+    public bool playerPickedSouvenir;
 
     //Player related variables
     public GameObject player;
@@ -64,7 +65,7 @@ public class LevelManager : MonoBehaviour {
         
         canvas = GameObject.Find("Canvas").transform;
         FindSouvenirGameObject();
-        progressionBar = canvas.transform.GetChild(1).GetChild(0).gameObject; // The progression bar is a children BE CAREFUL!
+        progressionBar = canvas.transform.GetChild(1).GetChild(0).GetChild(0).gameObject; // The progression bar is a children BE CAREFUL!
         progressionBar.transform.parent.gameObject.SetActive(true);
     }
 
@@ -92,6 +93,7 @@ public class LevelManager : MonoBehaviour {
     public void PickUpSouvenir()
     {
         souvenirText.text = "1 / 1";
+        playerPickedSouvenir = true;
     }
 
     public int  GetTotalNumberOfTrashInLevel() // Gets the total amount of trash 
@@ -111,12 +113,14 @@ public class LevelManager : MonoBehaviour {
     public void ClearScene() // When switching to another level, we need to clear the scene before making the new level spawn
     {
         progressionBar.transform.localScale = new Vector3(0, progressionBar.transform.localScale.y, progressionBar.transform.localScale.z);
-        endZone.ClearUI();
+        UIManager.CloseEndGamePanel();
+        UIManager.GoToGame();
         if (hasSouvenir)
         {
             souvenirText.text = "0 / 1";
             souvenirText.transform.parent.gameObject.SetActive(false);
             hasSouvenir = false;
+            playerPickedSouvenir = false;
         }
         foreach (GameObject trsh in trashToDestroy)
         {

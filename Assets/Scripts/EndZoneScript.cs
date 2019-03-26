@@ -28,6 +28,7 @@ public class EndZoneScript : MonoBehaviour {
     // Completion variables
     private float minTrashRequired;
     private float goldMedalRequired;
+    public float impossibleMargin;
 
     public float currentCompletion;
 
@@ -40,32 +41,20 @@ public class EndZoneScript : MonoBehaviour {
         if (gameUI)
         {
             TMProObject = GameObject.Find("Canvas").transform.GetChild(0).gameObject;
-            foreach (Transform canvasChild in gameUI.transform)
-            {
-                if (canvasChild.name == "End_Game_Panel") // We then get the elements we require from the endgame object
-                {
-                    endGamePanel = canvasChild.gameObject;
-                    endGameMessage = endGamePanel.transform.GetChild(0).GetChild(1).gameObject.GetComponent<Text>();
-                    enGameProgBar = endGamePanel.transform.GetChild(0).GetChild(0).GetChild(0).gameObject;
-                    progressionText = endGamePanel.transform.GetChild(0).GetChild(0).GetChild(1).gameObject.GetComponent<Text>();
-                    Debug.Log("engamebar object: " + enGameProgBar);
-                }
-            }
+            endGamePanel = UIManager.endGamePanel;
+            endGameMessage = endGamePanel.transform.GetChild(0).GetChild(1).gameObject.GetComponent<Text>();
+            enGameProgBar = endGamePanel.transform.GetChild(0).GetChild(0).GetChild(0).gameObject;
+            progressionText = endGamePanel.transform.GetChild(0).GetChild(0).GetChild(1).gameObject.GetComponent<Text>();
         }
         else Debug.LogWarning("There is no Canvas on the scene! Go pick it in the prefab folder");
         goldMedalRequired = levelManager.GetTotalNumberOfTrashInLevel();
+        goldMedalRequired -= impossibleMargin;
         minTrashRequired = goldMedalRequired * 80 / 100 ; // To complete the level the player has got gather 80% of the total amount of trash
         minTrashRequired = Mathf.RoundToInt(minTrashRequired);
-        //Debug.Log("mintrashtowin : " + minTrashRequired);
+        Debug.Log("mintrashtowin : " + minTrashRequired);
         TMProText = TMProObject.GetComponent<TextMeshProUGUI>();
     }
 
-    public void ClearUI()
-    {
-//        TMProObject.SetActive(false);
-        endGamePanel.SetActive(false);
-        endGamePanel.transform.GetChild(1).gameObject.SetActive(false);
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -80,13 +69,13 @@ public class EndZoneScript : MonoBehaviour {
 
     public void FinishLevel()
     {
-//        TMProObject.SetActive(true);
         if (currentCompletion >= minTrashRequired) // Minimum completion
         {
+            gameController.playerController.state = PlayerController.PlayerState.NOMOVE;
             endGameMessage.text = "Presque parfait.";
-            endGamePanel.SetActive(true);
+            UIManager.ShowEndGamePanel();
             SetProgressionLevel();
-            if (levelManager.hasSouvenir)
+            if (levelManager.playerPickedSouvenir)
             {
                 endGamePanel.transform.GetChild(1).gameObject.SetActive(true);
             }
@@ -97,6 +86,7 @@ public class EndZoneScript : MonoBehaviour {
         }
         else
         {
+            TMProText.gameObject.SetActive(true);
             TMProText.text = "Il reste des déchets dans ce secteur.";
             StartCoroutine(DelayedDestroy());
         }
@@ -105,7 +95,7 @@ public class EndZoneScript : MonoBehaviour {
     private IEnumerator DelayedDestroy()
     {
         yield return new WaitForSeconds(4);
-        ClearUI();
+        TMProText.gameObject.SetActive(false);
     }
 
     private void SetProgressionLevel()
@@ -114,7 +104,9 @@ public class EndZoneScript : MonoBehaviour {
         Debug.Log("completion level : " + completion);
         Vector3 progressBarCurrScale = enGameProgBar.transform.localScale;
         Vector3 progressBarNewScale = new Vector3(completion, progressBarCurrScale.y, progressBarCurrScale.z);
-        progressionText.text = (completion * 100) + " %";
+        completion = completion * 100;
+        completion = (int) completion;
+        progressionText.text = (completion) + " %";
         enGameProgBar.transform.localScale = progressBarNewScale;
     }
     

@@ -24,8 +24,13 @@ public class CameraManager : MonoBehaviour {
     private void Update ()
     {
         if (isMenu) return;
+        
         if(isReadyToMove)
         {
+            if (InputManager.PressSpace())
+            {
+                CancelCamMove();
+            }
             MoveToNewPosition();
         }
         else // After moving to the different level destinations the camera gets back to the player
@@ -33,7 +38,7 @@ public class CameraManager : MonoBehaviour {
             cameraYpos = transform.position.y;
             if (!Camera.main) return;
             Vector3 playViewportPos = Camera.main.WorldToViewportPoint(player.transform.position);
-            CenterOnPlayer(playViewportPos);
+            CenterOnTarget(playViewportPos);
         }
     }
 
@@ -42,14 +47,14 @@ public class CameraManager : MonoBehaviour {
         transform.position = new Vector3(transform.position.x, transform.position.y, player.transform.position.z - 2.5f);
     }
 
-    private void CenterOnPlayer(Vector3 playerPos) 
+    private void CenterOnTarget(Vector3 targetPos) //The camera focuses the target when he goes too low or too high
     {
-        playerYPos = playerPos.y; // playerYpos is the position of the player relative to the screenspace.
-        if (playerYPos <= 0.2f) // if the play goes to low, the camera switches back to a new height
+        playerYPos = targetPos.y; // playerYpos is the position of the target relative to the screenspace.
+        if (playerYPos <= 0.2f) // if the target goes to low, the camera switches back to a new height
         {
             cameraYpos -= 1f;
         }
-        else if (playerYPos >= 0.8f) // if the play goes to high, the camera switches back to a new height
+        else if (playerYPos >= 0.8f) // if the target goes to high, the camera switches back to a new height
         {
             cameraYpos += 1f;
         }
@@ -59,6 +64,7 @@ public class CameraManager : MonoBehaviour {
 
     private void MoveToNewPosition()
     {
+        // TODO : Learn Lerp!
         if (camDestIndex < camDestinations.Count)
         {
             if (!camDestinations[camDestIndex]) return;
@@ -78,9 +84,17 @@ public class CameraManager : MonoBehaviour {
             if (dist <= 1.2f)
             {
                 isReadyToMove = false;
-                gameController.isPaused = false;
+                gameController.playerController.state = PlayerController.PlayerState.PLAYING;
             }
         }
+    }
+
+    private void CancelCamMove()
+    {
+        camDestinations.Clear();
+        transform.position = player.transform.position;
+        isReadyToMove = false;
+        gameController.playerController.state = PlayerController.PlayerState.PLAYING;
     }
 
     public void FillDestinationList(List<GameObject> destinations) // The destination objects are stored in the LevelManager Script and this function allows us to get them

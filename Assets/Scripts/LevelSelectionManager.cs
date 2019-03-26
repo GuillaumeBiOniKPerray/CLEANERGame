@@ -21,6 +21,5 @@ public class LevelSelectionManager : MonoBehaviour
             buttonText.GetComponent<Text>().text = "LvL " + (i+1);
             i++;
         }
-        Debug.Log("There are : " + levels.Count + " levels !");
     }
 }
