@@ -36,7 +36,7 @@ public class TrashBallManager : MonoBehaviour {
                 TrashManager trash = other.GetComponent<TrashManager>();
                 int trashValue = trash.trashValue;
                 GrowTrashBall(other.gameObject, trashValue);
-                levelManager.SetNumberOfTrashCollected();
+//                levelManager.SetNumberOfTrashCollected();
                 break;
             case "Souvenir":
                 Destroy(other.gameObject);

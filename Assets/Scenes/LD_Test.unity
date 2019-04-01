@@ -6504,13 +6504,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1817954315855244, guid: 9a830c018f6ff4a48a916d8f302985d1, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4538443877905202, guid: 9a830c018f6ff4a48a916d8f302985d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 64.711
+      value: -6.878
       objectReference: {fileID: 0}
     - target: {fileID: 4538443877905202, guid: 9a830c018f6ff4a48a916d8f302985d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.012
+      value: -0.307
       objectReference: {fileID: 0}
     - target: {fileID: 4538443877905202, guid: 9a830c018f6ff4a48a916d8f302985d1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6566,12 +6570,12 @@ PrefabInstance:
     - target: {fileID: 70817537854035770, guid: 9a830c018f6ff4a48a916d8f302985d1,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.2
+      value: -0.11
       objectReference: {fileID: 0}
     - target: {fileID: 70817537854035770, guid: 9a830c018f6ff4a48a916d8f302985d1,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.47001317
+      value: 0.68
       objectReference: {fileID: 0}
     - target: {fileID: 70817537854035770, guid: 9a830c018f6ff4a48a916d8f302985d1,
         type: 3}
@@ -6582,6 +6586,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_UsedByEffector
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997950616300162, guid: 9a830c018f6ff4a48a916d8f302985d1, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a830c018f6ff4a48a916d8f302985d1, type: 3}
@@ -6595,7 +6603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1028306620}
   - component: {fileID: 1028306621}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Player_6_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6652,7 +6660,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: ded6c8724b9364249830b30b0799b3bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13583,6 +13591,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4946116027660897757, guid: 8383b4db832711e40a2a02d6642a4baa,
         type: 3}
+      propertyPath: levels.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946116027660897757, guid: 8383b4db832711e40a2a02d6642a4baa,
+        type: 3}
       propertyPath: canvasObject
       value: 
       objectReference: {fileID: 1277845497083444}
@@ -13621,6 +13634,36 @@ PrefabInstance:
       propertyPath: startingLevelID
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4946116027660897757, guid: 8383b4db832711e40a2a02d6642a4baa,
+        type: 3}
+      propertyPath: levels.Array.data[4]
+      value: 
+      objectReference: {fileID: 3044276309897755188, guid: ee5a48084408d574eb7f8bb4543bfdb9,
+        type: 3}
+    - target: {fileID: 4946116027660897757, guid: 8383b4db832711e40a2a02d6642a4baa,
+        type: 3}
+      propertyPath: levels.Array.data[5]
+      value: 
+      objectReference: {fileID: 114661133211666928, guid: 92595706154fea14f94f57310258b9de,
+        type: 3}
+    - target: {fileID: 4946116027660897757, guid: 8383b4db832711e40a2a02d6642a4baa,
+        type: 3}
+      propertyPath: levels.Array.data[6]
+      value: 
+      objectReference: {fileID: 114702277991084726, guid: 48786ff99a037a84a85f5a81bb4f7ad4,
+        type: 3}
+    - target: {fileID: 4946116027660897757, guid: 8383b4db832711e40a2a02d6642a4baa,
+        type: 3}
+      propertyPath: levels.Array.data[7]
+      value: 
+      objectReference: {fileID: 114661133211666928, guid: 6b6bb047c37887c41bb116af748fb8af,
+        type: 3}
+    - target: {fileID: 4946116027660897757, guid: 8383b4db832711e40a2a02d6642a4baa,
+        type: 3}
+      propertyPath: levels.Array.data[8]
+      value: 
+      objectReference: {fileID: 114661133211666928, guid: 359f5c373e6c935438b06238b89bb78b,
+        type: 3}
     - target: {fileID: 4946116027660897756, guid: 8383b4db832711e40a2a02d6642a4baa,
         type: 3}
       propertyPath: m_LocalPosition.x

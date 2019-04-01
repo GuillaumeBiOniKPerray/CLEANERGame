@@ -1989,6 +1989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50629234419343310
 Rigidbody2D:
   serializedVersion: 4
@@ -2642,6 +2643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50018258710572980
 Rigidbody2D:
   serializedVersion: 4
@@ -4452,6 +4454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50386990268919116
 Rigidbody2D:
   serializedVersion: 4
@@ -4700,6 +4703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50911395293342360
 Rigidbody2D:
   serializedVersion: 4
@@ -5061,6 +5065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50270882373230978
 Rigidbody2D:
   serializedVersion: 4
@@ -5521,6 +5526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50231437712974430
 Rigidbody2D:
   serializedVersion: 4
@@ -6087,6 +6093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50994156516465678
 Rigidbody2D:
   serializedVersion: 4
@@ -6498,6 +6505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50684234304072040
 Rigidbody2D:
   serializedVersion: 4
@@ -6746,6 +6754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50045700296564364
 Rigidbody2D:
   serializedVersion: 4
@@ -7312,6 +7321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50405340287708438
 Rigidbody2D:
   serializedVersion: 4
@@ -7878,6 +7888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50052805465721624
 Rigidbody2D:
   serializedVersion: 4
@@ -8020,6 +8031,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50262487861828510
 Rigidbody2D:
   serializedVersion: 4
@@ -8162,6 +8174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50855596034517490
 Rigidbody2D:
   serializedVersion: 4
@@ -8304,6 +8317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50507920754407660
 Rigidbody2D:
   serializedVersion: 4
@@ -8478,6 +8492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50714828555409660
 Rigidbody2D:
   serializedVersion: 4
@@ -9044,6 +9059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50975976957542858
 Rigidbody2D:
   serializedVersion: 4
@@ -9398,6 +9414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50082373367836028
 Rigidbody2D:
   serializedVersion: 4
@@ -9964,6 +9981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50227441943153932
 Rigidbody2D:
   serializedVersion: 4
@@ -10318,6 +10336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50675998252761754
 Rigidbody2D:
   serializedVersion: 4
@@ -11047,6 +11066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50726933141670026
 Rigidbody2D:
   serializedVersion: 4
@@ -11825,6 +11845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50170977624995138
 Rigidbody2D:
   serializedVersion: 4
@@ -12179,6 +12200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50762883795582080
 Rigidbody2D:
   serializedVersion: 4
@@ -13438,6 +13460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50185549673696926
 Rigidbody2D:
   serializedVersion: 4
@@ -13686,6 +13709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50929856693487628
 Rigidbody2D:
   serializedVersion: 4
@@ -13934,6 +13958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50774130444825346
 Rigidbody2D:
   serializedVersion: 4
@@ -14115,7 +14140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576407523241500}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.3, y: 0, z: 0}
+  m_LocalPosition: {x: -7.05, y: 0, z: 0}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
   m_Children: []
   m_Father: {fileID: 4073197710619032}
@@ -14182,6 +14207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50981290015492880
 Rigidbody2D:
   serializedVersion: 4
@@ -15419,6 +15445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50095524233026858
 Rigidbody2D:
   serializedVersion: 4
@@ -15879,6 +15906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50449926124784170
 Rigidbody2D:
   serializedVersion: 4
@@ -16021,6 +16049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50796546555514720
 Rigidbody2D:
   serializedVersion: 4
@@ -16163,6 +16192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50790964975052920
 Rigidbody2D:
   serializedVersion: 4
@@ -16305,6 +16335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50650854371622754
 Rigidbody2D:
   serializedVersion: 4
@@ -16553,6 +16584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50297135606451818
 Rigidbody2D:
   serializedVersion: 4
@@ -17119,6 +17151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50064687459342252
 Rigidbody2D:
   serializedVersion: 4
@@ -17367,6 +17400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50843851204037674
 Rigidbody2D:
   serializedVersion: 4
@@ -17615,6 +17649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50058304755750846
 Rigidbody2D:
   serializedVersion: 4
@@ -17969,6 +18004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50962486794525068
 Rigidbody2D:
   serializedVersion: 4
@@ -18380,6 +18416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50679224167154884
 Rigidbody2D:
   serializedVersion: 4
@@ -18461,6 +18498,7 @@ Transform:
   - {fileID: 4807373623104452}
   - {fileID: 4786624547472066}
   - {fileID: 7696393843520197092}
+  - {fileID: 29544062078197628}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18482,6 +18520,8 @@ MonoBehaviour:
   numberOfTrashInLevel: 0
   numberOfCollectedTrash: 0
   souvenirUI: {fileID: 1085175751671434, guid: 671c66717e5a4b244a006daa3a1c86aa, type: 3}
+  hasSouvenir: 0
+  playerPickedSouvenir: 0
   player: {fileID: 1817954315855244, guid: 9a830c018f6ff4a48a916d8f302985d1, type: 3}
   playerSpawn: {fileID: 1116877609586578}
   camPoints:
@@ -19973,6 +20013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50434286105166276
 Rigidbody2D:
   serializedVersion: 4
@@ -20675,6 +20716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50626981115770652
 Rigidbody2D:
   serializedVersion: 4
@@ -21453,6 +21495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50530810206724502
 Rigidbody2D:
   serializedVersion: 4
@@ -21807,6 +21850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50318477572463174
 Rigidbody2D:
   serializedVersion: 4
@@ -23009,6 +23053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50025624661864568
 Rigidbody2D:
   serializedVersion: 4
@@ -23151,6 +23196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50199462750536696
 Rigidbody2D:
   serializedVersion: 4
@@ -23293,6 +23339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50898124368864874
 Rigidbody2D:
   serializedVersion: 4
@@ -23859,6 +23906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50280078764279678
 Rigidbody2D:
   serializedVersion: 4
@@ -24849,6 +24897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50392559958948848
 Rigidbody2D:
   serializedVersion: 4
@@ -25477,6 +25526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50525094371104472
 Rigidbody2D:
   serializedVersion: 4
@@ -25619,6 +25669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50378854670331586
 Rigidbody2D:
   serializedVersion: 4
@@ -25666,6 +25717,82 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1001 &33974802856190542
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4217216228112878}
+    m_Modifications:
+    - target: {fileID: 1573124043725348, guid: 3c780d4739df256408d2d97db3061a2b, type: 3}
+      propertyPath: m_Name
+      value: Slope_1x1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580349802331442, guid: 3c780d4739df256408d2d97db3061a2b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580349802331442, guid: 3c780d4739df256408d2d97db3061a2b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580349802331442, guid: 3c780d4739df256408d2d97db3061a2b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580349802331442, guid: 3c780d4739df256408d2d97db3061a2b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580349802331442, guid: 3c780d4739df256408d2d97db3061a2b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580349802331442, guid: 3c780d4739df256408d2d97db3061a2b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580349802331442, guid: 3c780d4739df256408d2d97db3061a2b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580349802331442, guid: 3c780d4739df256408d2d97db3061a2b, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580349802331442, guid: 3c780d4739df256408d2d97db3061a2b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580349802331442, guid: 3c780d4739df256408d2d97db3061a2b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580349802331442, guid: 3c780d4739df256408d2d97db3061a2b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580349802331442, guid: 3c780d4739df256408d2d97db3061a2b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580349802331442, guid: 3c780d4739df256408d2d97db3061a2b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 60212137449725220, guid: 3c780d4739df256408d2d97db3061a2b,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 06a17a508a13e874bb59c57b11c01273, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3c780d4739df256408d2d97db3061a2b, type: 3}
+--- !u!4 &29544062078197628 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4580349802331442, guid: 3c780d4739df256408d2d97db3061a2b,
+    type: 3}
+  m_PrefabInstance: {fileID: 33974802856190542}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7701148266940920768
 PrefabInstance:
   m_ObjectHideFlags: 0

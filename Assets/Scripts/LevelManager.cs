@@ -112,7 +112,8 @@ public class LevelManager : MonoBehaviour {
 
     public void ClearScene() // When switching to another level, we need to clear the scene before making the new level spawn
     {
-        progressionBar.transform.localScale = new Vector3(0, progressionBar.transform.localScale.y, progressionBar.transform.localScale.z);
+//        progressionBar.transform.localScale = new Vector3(0, progressionBar.transform.localScale.y, progressionBar.transform.localScale.z);
+        UIManager.ClearProgression();
         UIManager.CloseEndGamePanel();
         UIManager.GoToGame();
         if (hasSouvenir)
@@ -124,7 +125,7 @@ public class LevelManager : MonoBehaviour {
         }
         foreach (GameObject trsh in trashToDestroy)
         {
-            Debug.Log("trash to destroy : " + trsh);
+//            Debug.Log("trash to destroy : " + trsh);
             Destroy(trsh);
         }
             trashToDestroy.Clear();

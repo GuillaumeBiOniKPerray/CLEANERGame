@@ -227,6 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50968513136243402
 Rigidbody2D:
   serializedVersion: 4
@@ -581,6 +582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50041269797966986
 Rigidbody2D:
   serializedVersion: 4
@@ -1147,6 +1149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50572986442528376
 Rigidbody2D:
   serializedVersion: 4
@@ -1607,6 +1610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50029319101256556
 Rigidbody2D:
   serializedVersion: 4
@@ -1749,6 +1753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50289122995899708
 Rigidbody2D:
   serializedVersion: 4
@@ -1997,6 +2002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50634897659374736
 Rigidbody2D:
   serializedVersion: 4
@@ -2563,6 +2569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50324169639844034
 Rigidbody2D:
   serializedVersion: 4
@@ -3023,6 +3030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50380125733907454
 Rigidbody2D:
   serializedVersion: 4
@@ -3271,6 +3279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50005218251033622
 Rigidbody2D:
   serializedVersion: 4
@@ -4008,6 +4017,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50119197918857078
 Rigidbody2D:
   serializedVersion: 4
@@ -4256,6 +4266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50284620840147438
 Rigidbody2D:
   serializedVersion: 4
@@ -4822,6 +4833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50334731471332646
 Rigidbody2D:
   serializedVersion: 4
@@ -4964,6 +4976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50673080051796966
 Rigidbody2D:
   serializedVersion: 4
@@ -5742,6 +5755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50625036666892074
 Rigidbody2D:
   serializedVersion: 4
@@ -5884,6 +5898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50653719016347134
 Rigidbody2D:
   serializedVersion: 4
@@ -6132,6 +6147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50821991883747934
 Rigidbody2D:
   serializedVersion: 4
@@ -6486,6 +6502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50691198134898548
 Rigidbody2D:
   serializedVersion: 4
@@ -6734,6 +6751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50078376770502576
 Rigidbody2D:
   serializedVersion: 4
@@ -7145,6 +7163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50929077438343184
 Rigidbody2D:
   serializedVersion: 4
@@ -8458,6 +8477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50154541116283846
 Rigidbody2D:
   serializedVersion: 4
@@ -8802,6 +8822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50256724773642210
 Rigidbody2D:
   serializedVersion: 4
@@ -8944,6 +8965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50146672901106142
 Rigidbody2D:
   serializedVersion: 4
@@ -9828,6 +9850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50152118595556974
 Rigidbody2D:
   serializedVersion: 4
@@ -10288,6 +10311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50597699838123330
 Rigidbody2D:
   serializedVersion: 4
@@ -10463,6 +10487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50217794979190104
 Rigidbody2D:
   serializedVersion: 4
@@ -10605,6 +10630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50403066863032904
 Rigidbody2D:
   serializedVersion: 4
@@ -10959,6 +10985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50104973516221278
 Rigidbody2D:
   serializedVersion: 4
@@ -11101,6 +11128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50022161631119268
 Rigidbody2D:
   serializedVersion: 4
@@ -11424,7 +11452,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1552763137425986}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 06a17a508a13e874bb59c57b11c01273, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -11778,6 +11806,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50051146145847912
 Rigidbody2D:
   serializedVersion: 4
@@ -12344,6 +12373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50105454577058614
 Rigidbody2D:
   serializedVersion: 4
@@ -12486,6 +12516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50485044819077148
 Rigidbody2D:
   serializedVersion: 4
@@ -13264,6 +13295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50565024092918080
 Rigidbody2D:
   serializedVersion: 4
@@ -13406,6 +13438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50875255706346512
 Rigidbody2D:
   serializedVersion: 4
@@ -13548,6 +13581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50424377960716284
 Rigidbody2D:
   serializedVersion: 4
@@ -13959,6 +13993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50877646984894846
 Rigidbody2D:
   serializedVersion: 4
@@ -14555,6 +14590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50917239734435958
 Rigidbody2D:
   serializedVersion: 4
@@ -14697,6 +14733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50669195110312034
 Rigidbody2D:
   serializedVersion: 4
@@ -15366,6 +15403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50398706824496674
 Rigidbody2D:
   serializedVersion: 4
@@ -15508,6 +15546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50896117198827112
 Rigidbody2D:
   serializedVersion: 4
@@ -15919,6 +15958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50385035338363776
 Rigidbody2D:
   serializedVersion: 4
@@ -16485,6 +16525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50847873420152628
 Rigidbody2D:
   serializedVersion: 4
@@ -16839,6 +16880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50657852518567408
 Rigidbody2D:
   serializedVersion: 4
@@ -17224,6 +17266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50119687533267178
 Rigidbody2D:
   serializedVersion: 4
@@ -17366,6 +17409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50862423536200870
 Rigidbody2D:
   serializedVersion: 4
@@ -17720,6 +17764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50821141973337668
 Rigidbody2D:
   serializedVersion: 4
@@ -18074,6 +18119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50272319448892454
 Rigidbody2D:
   serializedVersion: 4
@@ -18246,6 +18292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50805200154082990
 Rigidbody2D:
   serializedVersion: 4
@@ -18388,6 +18435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50855449095563524
 Rigidbody2D:
   serializedVersion: 4
@@ -19961,6 +20009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50233701851440956
 Rigidbody2D:
   serializedVersion: 4
@@ -20103,6 +20152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50210434193930672
 Rigidbody2D:
   serializedVersion: 4
@@ -20669,6 +20719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50129980250164430
 Rigidbody2D:
   serializedVersion: 4
@@ -20811,6 +20862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50658361964300108
 Rigidbody2D:
   serializedVersion: 4

@@ -2320,6 +2320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50629234419343310
 Rigidbody2D:
   serializedVersion: 4
@@ -3537,6 +3538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 5
+  spriteList: []
 --- !u!50 &50863742492941436
 Rigidbody2D:
   serializedVersion: 4
@@ -3725,7 +3727,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184817740206430}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.46, y: 2.065, z: 0}
+  m_LocalPosition: {x: -3.1369996, y: 2.065, z: 0}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
   m_Children: []
   m_Father: {fileID: 4073197710619032}
@@ -3792,6 +3794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50948975003025486
 Rigidbody2D:
   serializedVersion: 4
@@ -4978,6 +4981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 5
+  spriteList: []
 --- !u!50 &50619527258633572
 Rigidbody2D:
   serializedVersion: 4
@@ -5094,6 +5098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50911395293342360
 Rigidbody2D:
   serializedVersion: 4
@@ -5442,6 +5447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50270882373230978
 Rigidbody2D:
   serializedVersion: 4
@@ -5796,6 +5802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50231437712974430
 Rigidbody2D:
   serializedVersion: 4
@@ -6176,6 +6183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 5
+  spriteList: []
 --- !u!50 &50707884839681966
 Rigidbody2D:
   serializedVersion: 4
@@ -6282,7 +6290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1292108671006574}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.0130005, y: 2.065, z: 0}
+  m_LocalPosition: {x: -3.69, y: 2.065, z: 0}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
   m_Children: []
   m_Father: {fileID: 4073197710619032}
@@ -6349,6 +6357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50239361998911870
 Rigidbody2D:
   serializedVersion: 4
@@ -6491,6 +6500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50045700296564364
 Rigidbody2D:
   serializedVersion: 4
@@ -6739,6 +6749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50031732476679984
 Rigidbody2D:
   serializedVersion: 4
@@ -7946,6 +7957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50585097584346474
 Rigidbody2D:
   serializedVersion: 4
@@ -8194,6 +8206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50687169002333292
 Rigidbody2D:
   serializedVersion: 4
@@ -8923,6 +8936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50227441943153932
 Rigidbody2D:
   serializedVersion: 4
@@ -11829,6 +11843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50563098868766122
 Rigidbody2D:
   serializedVersion: 4
@@ -12140,6 +12155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50260919284540600
 Rigidbody2D:
   serializedVersion: 4
@@ -12533,7 +12549,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1551107140907020}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.7770004, y: 2.065, z: 0}
+  m_LocalPosition: {x: -3.454, y: 2.065, z: 0}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
   m_Children: []
   m_Father: {fileID: 4073197710619032}
@@ -12600,6 +12616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50841975531895204
 Rigidbody2D:
   serializedVersion: 4
@@ -13099,7 +13116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568845994460046}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.32, y: 2.065, z: 0}
+  m_LocalPosition: {x: -2.9969995, y: 2.065, z: 0}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
   m_Children: []
   m_Father: {fileID: 4073197710619032}
@@ -13166,6 +13183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50517825094470418
 Rigidbody2D:
   serializedVersion: 4
@@ -13241,7 +13259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1576407523241500}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.483, y: 2.065, z: 0}
+  m_LocalPosition: {x: -4.1599994, y: 2.065, z: 0}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
   m_Children: []
   m_Father: {fileID: 4073197710619032}
@@ -13308,6 +13326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50006243000313108
 Rigidbody2D:
   serializedVersion: 4
@@ -13595,7 +13614,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581687555544800}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.6429977, y: 2.065, z: 0}
+  m_LocalPosition: {x: -3.3199973, y: 2.065, z: 0}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
   m_Children: []
   m_Father: {fileID: 4073197710619032}
@@ -13662,6 +13681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50455956280337346
 Rigidbody2D:
   serializedVersion: 4
@@ -14513,6 +14533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50809354174624842
 Rigidbody2D:
   serializedVersion: 4
@@ -14588,7 +14609,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640273276378168}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.883, y: 2.065, z: 0}
+  m_LocalPosition: {x: -3.5599995, y: 2.065, z: 0}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
   m_Children: []
   m_Father: {fileID: 4073197710619032}
@@ -14655,6 +14676,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50981290015492880
 Rigidbody2D:
   serializedVersion: 4
@@ -14770,7 +14792,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646720239927094}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.1960003, y: 2.065, z: 0}
+  m_LocalPosition: {x: -3.8729997, y: 2.065, z: 0}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
   m_Children: []
   m_Father: {fileID: 4073197710619032}
@@ -14837,6 +14859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50581039226203736
 Rigidbody2D:
   serializedVersion: 4
@@ -15297,6 +15320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50938282083618838
 Rigidbody2D:
   serializedVersion: 4
@@ -15441,7 +15465,7 @@ Transform:
   m_GameObject: {fileID: 1674355667336944}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.5, y: 0.5, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 224419560000414822}
   m_Father: {fileID: 4600713791245670}
@@ -15504,7 +15528,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1674355667336944}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 06a17a508a13e874bb59c57b11c01273, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -16450,6 +16474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50064687459342252
 Rigidbody2D:
   serializedVersion: 4
@@ -16967,6 +16992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50679224167154884
 Rigidbody2D:
   serializedVersion: 4
@@ -17069,6 +17095,8 @@ MonoBehaviour:
   numberOfTrashInLevel: 0
   numberOfCollectedTrash: 0
   souvenirUI: {fileID: 1085175751671434, guid: 671c66717e5a4b244a006daa3a1c86aa, type: 3}
+  hasSouvenir: 0
+  playerPickedSouvenir: 0
   player: {fileID: 1817954315855244, guid: 9a830c018f6ff4a48a916d8f302985d1, type: 3}
   playerSpawn: {fileID: 1116877609586578}
   camPoints:
@@ -18417,7 +18445,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1796583949662438}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 06a17a508a13e874bb59c57b11c01273, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -20180,6 +20208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50358320017855154
 Rigidbody2D:
   serializedVersion: 4
@@ -20994,7 +21023,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888057291197136}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.345, y: 2.065, z: 0}
+  m_LocalPosition: {x: -4.022, y: 2.065, z: 0}
   m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
   m_Children: []
   m_Father: {fileID: 4073197710619032}
@@ -21061,6 +21090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50870443506914516
 Rigidbody2D:
   serializedVersion: 4
@@ -21521,6 +21551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50323141816941180
 Rigidbody2D:
   serializedVersion: 4
@@ -21769,6 +21800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50025624661864568
 Rigidbody2D:
   serializedVersion: 4
@@ -21911,6 +21943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50898124368864874
 Rigidbody2D:
   serializedVersion: 4
@@ -23525,6 +23558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50937600869036010
 Rigidbody2D:
   serializedVersion: 4

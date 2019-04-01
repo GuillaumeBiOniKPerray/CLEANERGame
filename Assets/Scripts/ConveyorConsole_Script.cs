@@ -31,6 +31,7 @@ public class ConveyorConsole_Script : MonoBehaviour {
             foreach (Conveyor_Script convScript in convScripts)
             {
                 convScript.goRight =switcher;
+                convScript.FlipArrow(switcher);
             }
         }
     }

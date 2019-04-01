@@ -28,10 +28,11 @@ public class EndZoneScript : MonoBehaviour {
     // Completion variables
     private float minTrashRequired;
     private float goldMedalRequired;
-    public float impossibleMargin;
-
     public float currentCompletion;
 
+    //Absorption variables
+    private GameObject ballToAbsorb;
+    private bool canAbsorb;
 
     private void Start()
     {
@@ -48,11 +49,21 @@ public class EndZoneScript : MonoBehaviour {
         }
         else Debug.LogWarning("There is no Canvas on the scene! Go pick it in the prefab folder");
         goldMedalRequired = levelManager.GetTotalNumberOfTrashInLevel();
-        goldMedalRequired -= impossibleMargin;
         minTrashRequired = goldMedalRequired * 80 / 100 ; // To complete the level the player has got gather 80% of the total amount of trash
         minTrashRequired = Mathf.RoundToInt(minTrashRequired);
-        Debug.Log("mintrashtowin : " + minTrashRequired);
+//        Debug.Log("mintrashtowin : " + minTrashRequired);
         TMProText = TMProObject.GetComponent<TextMeshProUGUI>();
+    }
+
+    private void Update()
+    {
+        if (canAbsorb)
+        {
+            Vector3 ballPos = ballToAbsorb.transform.position;
+            ballToAbsorb.transform.position = Vector3.Lerp(ballPos, transform.position, Time.deltaTime);
+            float dist = Vector3.Distance(ballPos, transform.position);
+            if (dist < 0.1f) canAbsorb = false;
+        }
     }
 
 
@@ -61,9 +72,15 @@ public class EndZoneScript : MonoBehaviour {
         if (collision.gameObject.CompareTag("Trashball"))
         {
             GameObject trashBall = collision.gameObject;
-            float trashBallWeight = trashBall.GetComponent<Rigidbody2D>().mass; // It is the mass of the trashball that counts for the completion purposes
-//            Debug.Log("trashBall weight : " + trashBallWeight);
+            ballToAbsorb = trashBall;
+            Rigidbody2D trashBallRb = trashBall.GetComponent<Rigidbody2D>();
+            float trashBallWeight = trashBallRb.mass; // It is the mass of the trashball that counts for the completion purposes
+            trashBall.SetActive(false);
+//            trashBall.layer = 11;
+//            trashBallRb.simulated = false;
+//            Destroy(trashBall.GetComponent<CircleCollider2D>());
             currentCompletion += trashBallWeight;
+            UIManager.UpdateProgressionBar((int)currentCompletion/goldMedalRequired);
         }
     }
 
@@ -101,7 +118,7 @@ public class EndZoneScript : MonoBehaviour {
     private void SetProgressionLevel()
     {
         float completion = currentCompletion / goldMedalRequired;
-        Debug.Log("completion level : " + completion);
+//        Debug.Log("completion level : " + completion);
         Vector3 progressBarCurrScale = enGameProgBar.transform.localScale;
         Vector3 progressBarNewScale = new Vector3(completion, progressBarCurrScale.y, progressBarCurrScale.z);
         completion = completion * 100;

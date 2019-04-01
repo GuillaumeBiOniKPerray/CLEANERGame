@@ -103,7 +103,7 @@ public class CameraManager : MonoBehaviour {
         foreach (GameObject dest in destinations)
         {
             camDestinations.Add(dest);
-            Debug.Log("Destination : " + dest);
+//            Debug.Log("Destination : " + dest);
         }
         camDestIndex = 0;
     }

@@ -10,11 +10,11 @@ public class UIManager : MonoBehaviour
      * 
      */
 
-    // UI related objects
     // -Main Menu Objects-
     public static GameObject mainMenu;
     public static GameObject mainMenuPanel;
     public static GameObject levelSelectionPanel;
+    public static bool onMenu;
     
     public static GameObject gameUI;
     
@@ -23,8 +23,11 @@ public class UIManager : MonoBehaviour
     
     public static GameObject pausePanel;
     
-    public static GameObject currentUIOnScreen;
-
+    
+    //InGame Objects
+    public static GameObject progBar;
+    
+    
     private void Awake()
     {
         foreach (Transform uiElement in transform)
@@ -35,6 +38,7 @@ public class UIManager : MonoBehaviour
             {
                 case "Game_UI":
                     gameUI = uiElementGo;
+                    progBar = gameUI.transform.GetChild(0).GetChild(0).gameObject;
                     break;
                 case "Menu":
                     mainMenu = uiElementGo;
@@ -54,6 +58,9 @@ public class UIManager : MonoBehaviour
         }
     }
 
+
+    #region UIPanels
+
     public static void GoToMainMenu()
     {
         endGamePanel.SetActive(false);
@@ -65,6 +72,7 @@ public class UIManager : MonoBehaviour
         mainMenu.SetActive(true);
         mainMenuPanel.SetActive(true);
         levelSelectionPanel.SetActive(false);
+        onMenu = true;
     }
 
     public static void ShowPausePanel(bool value)
@@ -83,30 +91,28 @@ public class UIManager : MonoBehaviour
     {
         endGamePanel.SetActive(true);
         gameUI.SetActive(false);
+        
     }
 
     public static void GoToGame()
     {
+        onMenu = false;
         mainMenu.SetActive(false);
         endGamePanel.SetActive(false);
         gameUI.SetActive(true);
     }
-    
-//    public static GameObject GetCurrenUIOnScreen()
-//    {
-//        return currentUIOnScreen;
-//    }
-//    
-//
-//    public static void SetCurrentUIOnScreen(GameObject newUI)
-//    {
-//        currentUIOnScreen = newUI;
-//    }
 
-//    public static void SwitchUI(GameObject newUI)
-//    {
-//        currentUIOnScreen.SetActive(false);
-//        currentUIOnScreen = newUI;
-//        currentUIOnScreen.SetActive(true);
-//    }
+    #endregion
+
+    public static void UpdateProgressionBar(float amount)
+    {
+        Vector3 progToAdd = new Vector3(amount, progBar.transform.localScale.y, progBar.transform.localScale.z);
+        progBar.transform.localScale = progToAdd;
+    }
+
+    public static void ClearProgression()
+    {
+        progBar.transform.localScale = new Vector3(0, progBar.transform.localScale.y, progBar.transform.localScale.z);
+    }
+    
 }

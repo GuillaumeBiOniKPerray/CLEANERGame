@@ -33,7 +33,7 @@ public class Conveyor_Script : MonoBehaviour {
         else return -1;
     }
 
-    private void FlipArrow(bool right) // Changes the size of the arrow to flip it
+    public void FlipArrow(bool right) // Changes the size of the arrow to flip it
     {
         Vector3 currentArrowScale = arrow.transform.localScale;
         float xValue = currentArrowScale.x;

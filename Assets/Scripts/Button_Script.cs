@@ -18,12 +18,10 @@ public class Button_Script : MonoBehaviour {
     private Animator animController;
 
     //Door related variables
-    private Door_Script doorScript;
+    public Door_Script doorScript;
 
 	private void Start ()
     {
-        GameObject door = transform.parent.parent.transform.GetChild(0).gameObject;
-        doorScript = door.GetComponent<Door_Script>();
         animController = GetComponent<Animator>();
         massText.text = "Min : " + minWeightRequired + "kg";
     }
@@ -37,7 +35,7 @@ public class Button_Script : MonoBehaviour {
                 if(playerOnly) 
                 {
                     ChangeAnimState(true);
-                    doorScript.ChangeAnimState(true);
+                    doorScript.DoorAction(true);
                 }
 
                 break;
@@ -55,7 +53,7 @@ public class Button_Script : MonoBehaviour {
                     if(ballRB.mass>=minWeightRequired) //!\ !BE CAREFUL! This won't work with multiple balls /!\\
                     {
                         ChangeAnimState(true);
-                        doorScript.ChangeAnimState(true);
+                        doorScript.DoorAction(true);
                     }
                 }
 
@@ -75,7 +73,7 @@ public class Button_Script : MonoBehaviour {
                 if(playerOnly)
                 {
                     ChangeAnimState(false);
-                    doorScript.ChangeAnimState(false);
+                    doorScript.DoorAction(false);
                 }
 
                 break;
@@ -84,10 +82,10 @@ public class Button_Script : MonoBehaviour {
                 if(!playerOnly)
                 {
                     ChangeAnimState(false);
-                    doorScript.ChangeAnimState(false);
+                    doorScript.DoorAction(false);
                 }
                 ChangeAnimState(false);
-                doorScript.ChangeAnimState(false);
+                doorScript.DoorAction(false);
                 break;
             default:
                 break;

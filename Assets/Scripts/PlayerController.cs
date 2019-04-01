@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour {
     private GameObject trashBallOffset;// This is the place we want to instantiate a ball from
     public float maxDistanceToTrashball;
     private bool faceRight = true; // right/left boolean used to flip the player's orientation
-    private bool isJumping = false;
+    public bool isJumping = false;
     private bool isCleaning; // Allows the player to stop gathering trash while holding a key.
 
     private GameObject currentTrashball; // Trashball that is being pushed
@@ -140,13 +140,13 @@ public class PlayerController : MonoBehaviour {
     private void CheckTrashBallPosition()
     {
         Vector3 point = transform.position + new Vector3(transform.localScale.x / 2, 0, 0);
-        RaycastHit2D hit = Physics2D.Raycast(point, Vector2.down, 0.2f, trashBallLayer); // I only consider the "Trashball" layer
+        RaycastHit2D hit = Physics2D.Raycast(point, Vector2.down, 0.4f, trashBallLayer); // I only consider the "Trashball" layer. Be careful about the 'distance' parameter!
         Debug.DrawRay(point, Vector2.down, Color.red);
         if (hit.collider)
         {
             isJumping = false;
         }
-        RaycastHit2D hitMid = Physics2D.Raycast(transform.position, Vector2.down, 0.2f, trashBallLayer); // I only consider the "Trashball" layer
+        RaycastHit2D hitMid = Physics2D.Raycast(transform.position, Vector2.down, 0.4f, trashBallLayer); // I only consider the "Trashball" layer. Be careful about the 'distance' parameter!
         Debug.DrawRay(transform.position, Vector2.down, Color.red);
         if (hitMid.collider)
         {
@@ -188,7 +188,7 @@ public class PlayerController : MonoBehaviour {
                     GameObject newTrash = Instantiate(trashBall, trashBallOffset.transform.position, Quaternion.identity);
                     levelManager.AddToTrashToDestroy(newTrash);
                     newTrash.GetComponent<Rigidbody2D>().mass = other.GetComponent<TrashManager>().trashValue;
-                    levelManager.SetNumberOfTrashCollected();
+//                    levelManager.SetNumberOfTrashCollected();
                     Destroy(other.gameObject);
                 }
                 break;

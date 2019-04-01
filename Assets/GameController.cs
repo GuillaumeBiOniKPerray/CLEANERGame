@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditorInternal;
+//using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -47,19 +47,16 @@ public class GameController : MonoBehaviour {
         if (InputManager.PressNextLevel()) SwitchToOtherLevel(1);
         if (InputManager.PressPrevLevel()) SwitchToOtherLevel(-1);
         if (InputManager.PressRKey()) GoToOtherLevel(currentLevelID);
-        if (InputManager.PressPause()) PauseGame();
+        if (InputManager.PressPause())
+        {
+            if(!UIManager.onMenu) PauseGame();
+            else
+            {
+                UIManager.GoToMainMenu();
+            }
+        }
+            
     }
-	
-	/*public void InitiateFirstLevel(int idSelector)
-    {
-        currentLevel = Instantiate(levels[idSelector].gameObject);
-        currentPlayer = player;
-        currentPlayer.transform.position = levels[idSelector].playerSpawn.transform.position;
-        currentLevelManager = currentLevel.GetComponent<LevelManager>();
-        currentPlayer.GetComponent<PlayerController>().SetLevelManager(currentLevelManager);
-        currentLevelID = idSelector;
-        player.SetActive(true);
-    }*/
 	
     public void InitiateFirstLevel(int idSelector)
     {
@@ -184,7 +181,7 @@ public class GameController : MonoBehaviour {
 
     public static LevelManager GetCurrentLevelManager()
     {
-        Debug.Log("level Manager : " + currentLevelManager);
+//        Debug.Log("level Manager : " + currentLevelManager);
         return currentLevelManager;
     }
 }
