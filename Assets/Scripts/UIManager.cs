@@ -74,6 +74,20 @@ public class UIManager : MonoBehaviour
         levelSelectionPanel.SetActive(false);
         onMenu = true;
     }
+    
+    public void MainMenu() // Used in button because static doesn't work
+    {
+        endGamePanel.SetActive(false);
+        pausePanel.SetActive(false);
+        gameUI.SetActive(false);
+        
+        //The main menu is composed of a "mainMenuPanel" and a "levelSelectionPanel"
+        //We always want to have the mainMenuPanel active when we go to the menu
+        mainMenu.SetActive(true);
+        mainMenuPanel.SetActive(true);
+        levelSelectionPanel.SetActive(false);
+        onMenu = true;
+    }
 
     public static void ShowPausePanel(bool value)
     {

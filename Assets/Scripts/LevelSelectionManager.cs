@@ -18,7 +18,7 @@ public class LevelSelectionManager : MonoBehaviour
             GameObject icon = Instantiate(levelIcon, transform);
             icon.GetComponent<ClickableLevelIcon>().levelId = i;
             Transform buttonText = icon.transform.GetChild(0).GetChild(0);
-            buttonText.GetComponent<Text>().text = "LvL " + (i+1);
+            buttonText.GetComponent<Text>().text = "Niveau " + (i+1);
             i++;
         }
     }

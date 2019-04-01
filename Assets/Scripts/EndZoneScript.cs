@@ -57,13 +57,13 @@ public class EndZoneScript : MonoBehaviour {
 
     private void Update()
     {
-        if (canAbsorb)
-        {
-            Vector3 ballPos = ballToAbsorb.transform.position;
-            ballToAbsorb.transform.position = Vector3.Lerp(ballPos, transform.position, Time.deltaTime);
-            float dist = Vector3.Distance(ballPos, transform.position);
-            if (dist < 0.1f) canAbsorb = false;
-        }
+//        if (canAbsorb)
+//        {
+//            Vector3 ballPos = ballToAbsorb.transform.position;
+//            ballToAbsorb.transform.position = Vector3.Lerp(ballPos, transform.position, Time.deltaTime);
+//            float dist = Vector3.Distance(ballPos, transform.position);
+//            if (dist < 0.1f) canAbsorb = false;
+//        }
     }
 
 
