@@ -25,6 +25,7 @@
           <e p="LifterManager.cs" t="Include" />
           <e p="MovingPlateform.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="PusherBehavior.cs" t="Include" />
           <e p="Souvenir_Script.cs" t="Include" />
           <e p="TrackScript.cs" t="Include" />
           <e p="TrashBallManager.cs" t="Include" />

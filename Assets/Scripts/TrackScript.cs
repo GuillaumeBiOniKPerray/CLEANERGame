@@ -19,8 +19,8 @@ public class TrackScript : MonoBehaviour
     {
         Debug.DrawLine(transform.position, body.transform.position, Color.red);
         Debug.DrawRay(transform.position, Vector3.down, Color.red);
-        Ray ray = new Ray();
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.2f);
+        LayerMask layerMask = ~ 1 << 15;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.2f, layerMask);
         if (hit.collider.gameObject)
         {
             Debug.Log(hit.collider.gameObject);
