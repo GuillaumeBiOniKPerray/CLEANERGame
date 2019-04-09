@@ -26,7 +26,7 @@ public class PusherBehavior : MonoBehaviour
     {
         minAngleThreshold = -maxAngleThreshold;
         ySize = transform.position.y - rayOrigin.transform.position.y;
-        Debug.Log("half size of pusher : " + ySize);
+//        Debug.Log("half size of pusher : " + ySize);
     }
 
     private void Update()
@@ -34,19 +34,19 @@ public class PusherBehavior : MonoBehaviour
         linkPosition = transform.GetChild(0).position;
         arm.transform.position = linkPosition;
         
-        Debug.Log("-------------------------------------");
+        
         
         //Rotation
         const float c = 0.5f;
 //        float a = Vector2.Distance(new Vector2(0, body.transform.position.y), new Vector2(0, arm.transform.position.y));
         float a = body.transform.position.y - arm.transform.position.y;
         a = Mathf.Clamp(a, -c, c);
-        Debug.Log("a : " +a );
+//        Debug.Log("a : " +a );
         float cosAngle = a / c;
-        Debug.Log("cosAngle : " +cosAngle);
+//        Debug.Log("cosAngle : " +cosAngle);
         float angle = Mathf.Acos(cosAngle);
         float degreeAngle = angle * Mathf.Rad2Deg;
-        Debug.Log("angle into degrees : " +degreeAngle);
+//        Debug.Log("angle into degrees : " +degreeAngle);
         Quaternion rot;
         float newAngle;
         if (degreeAngle < 90) //If the angle is lower than 90 degrees, it means that the pusher is supposed to be lower that the body's center
@@ -63,7 +63,6 @@ public class PusherBehavior : MonoBehaviour
         }
         arm.transform.rotation = rot;
 
-        
         //Position
         Vector3 pusherPos = transform.position;
         Vector3 rayPos = rayOrigin.transform.position;
@@ -74,10 +73,9 @@ public class PusherBehavior : MonoBehaviour
 
         if (hit.collider)
         {
-            Debug.Log("Hit!");
             yPos = hit.point.y + ySize;
             float yDistance = body.transform.position.y - yPos;
-            Debug.Log("distance : " + yDistance);
+//            Debug.Log("distance : " + yDistance);
             if (yDistance > maxDistance)
             {
                 yPos = body.transform.position.y - maxDistance ;
