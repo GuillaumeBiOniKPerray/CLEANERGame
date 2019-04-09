@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CLEANERGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CLEANERGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Player_Tests.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Player_Tests.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PusherBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PusherBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Player/Compo/Pusher.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Player/Compo/Pusher.png.meta" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,17 +21,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/PusherBehavior.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="758">
-              <caret line="82" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="698">
+              <caret line="82" column="62" selection-start-line="82" selection-start-column="62" selection-end-line="82" selection-end-column="62" />
               <folding>
-                <marker date="1554800396445" expanded="false" signature="6:174" ph="..." />
-                <marker date="1554800396445" expanded="true" signature="219:3051" ph="{...}" />
-                <marker date="1554800396445" expanded="true" signature="603:663" ph="{...}" />
-                <marker date="1554800396445" expanded="true" signature="690:3049" ph="{...}" />
-                <marker date="1554800396445" expanded="true" signature="1605:1825" ph="{...}" />
-                <marker date="1554800396445" expanded="true" signature="1954:2171" ph="{...}" />
-                <marker date="1554800396445" expanded="true" signature="2619:2949" ph="{...}" />
-                <marker date="1554800396445" expanded="true" signature="2847:2939" ph="{...}" />
+                <marker date="1554809294434" expanded="false" signature="6:174" ph="..." />
+                <marker date="1554809294434" expanded="true" signature="219:3256" ph="{...}" />
+                <marker date="1554809294434" expanded="true" signature="629:813" ph="{...}" />
+                <marker date="1554809294434" expanded="true" signature="840:3254" ph="{...}" />
+                <marker date="1554809294434" expanded="true" signature="1755:1975" ph="{...}" />
+                <marker date="1554809294434" expanded="true" signature="2104:2321" ph="{...}" />
+                <marker date="1554809294434" expanded="true" signature="2815:3154" ph="{...}" />
+                <marker date="1554809294434" expanded="true" signature="3051:3144" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -97,15 +98,15 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
       <pane id="FileSystemExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
       <pane id="AssemblyExplorer" />
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -161,11 +162,12 @@
       <workItem from="1554193586077" duration="16390000" />
       <workItem from="1554707674158" duration="13555000" />
       <workItem from="1554794456529" duration="5941000" />
+      <workItem from="1554804188310" duration="2463000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98072000" />
+    <option name="totallyTimeSpent" value="100535000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -180,11 +182,11 @@
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49740395" visible="true" weight="0.12260128" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49636552" visible="true" weight="0.123667374" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
-      <window_info active="true" id="Favorites" order="4" sideWeight="0.5025961" side_tool="true" visible="true" weight="0.12260128" />
+      <window_info active="true" id="Favorites" order="4" sideWeight="0.50363445" side_tool="true" visible="true" weight="0.123667374" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32917964" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -622,17 +624,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PusherBehavior.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="758">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        <state relative-caret-position="698">
+          <caret line="82" column="62" selection-start-line="82" selection-start-column="62" selection-end-line="82" selection-end-column="62" />
           <folding>
-            <marker date="1554800396445" expanded="false" signature="6:174" ph="..." />
-            <marker date="1554800396445" expanded="true" signature="219:3051" ph="{...}" />
-            <marker date="1554800396445" expanded="true" signature="603:663" ph="{...}" />
-            <marker date="1554800396445" expanded="true" signature="690:3049" ph="{...}" />
-            <marker date="1554800396445" expanded="true" signature="1605:1825" ph="{...}" />
-            <marker date="1554800396445" expanded="true" signature="1954:2171" ph="{...}" />
-            <marker date="1554800396445" expanded="true" signature="2619:2949" ph="{...}" />
-            <marker date="1554800396445" expanded="true" signature="2847:2939" ph="{...}" />
+            <marker date="1554809294434" expanded="false" signature="6:174" ph="..." />
+            <marker date="1554809294434" expanded="true" signature="219:3256" ph="{...}" />
+            <marker date="1554809294434" expanded="true" signature="629:813" ph="{...}" />
+            <marker date="1554809294434" expanded="true" signature="840:3254" ph="{...}" />
+            <marker date="1554809294434" expanded="true" signature="1755:1975" ph="{...}" />
+            <marker date="1554809294434" expanded="true" signature="2104:2321" ph="{...}" />
+            <marker date="1554809294434" expanded="true" signature="2815:3154" ph="{...}" />
+            <marker date="1554809294434" expanded="true" signature="3051:3144" ph="{...}" />
           </folding>
         </state>
       </provider>

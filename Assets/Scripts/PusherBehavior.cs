@@ -13,18 +13,20 @@ public class PusherBehavior : MonoBehaviour
     public float distanceWithBody;
     public GameObject arm;
     public LayerMask layerMask;
+    public GameObject rayOrigin;
     public float rayLength;
     public float maxAngleThreshold;
     public float maxDistance;
     private float minAngleThreshold;
     private Vector3 vectorDistance;
     private Vector3 linkPosition;
-    private float armSize;
-    
+    private float ySize;
 
     private void Start()
     {
         minAngleThreshold = -maxAngleThreshold;
+        ySize = transform.position.y - rayOrigin.transform.position.y;
+        Debug.Log("half size of pusher : " + ySize);
     }
 
     private void Update()
@@ -64,20 +66,21 @@ public class PusherBehavior : MonoBehaviour
         
         //Position
         Vector3 pusherPos = transform.position;
+        Vector3 rayPos = rayOrigin.transform.position;
         float yPos = pusherPos.y ;
-        Vector3 raycastPosition = new Vector3(pusherPos.x, pusherPos.y + 0.05f, 0);
+        Vector3 raycastPosition = new Vector3(rayPos.x, rayPos.y + 0.02f, 0);
         RaycastHit2D hit = Physics2D.Raycast(raycastPosition, Vector2.down, rayLength, layerMask); //Hits the 'Environment' layer
-        Debug.DrawRay(pusherPos,Vector3.down,Color.red);
+        Debug.DrawRay(rayPos,Vector3.down,Color.red);
 
         if (hit.collider)
         {
             Debug.Log("Hit!");
-            yPos = hit.point.y;
+            yPos = hit.point.y + ySize;
             float yDistance = body.transform.position.y - yPos;
             Debug.Log("distance : " + yDistance);
             if (yDistance > maxDistance)
             {
-                yPos = body.transform.position.y - maxDistance;
+                yPos = body.transform.position.y - maxDistance ;
             }
         }
         transform.position = new Vector2(body.transform.position.x + distanceWithBody, yPos);
