@@ -10,6 +10,7 @@ public class TrackBehavior : MonoBehaviour
     
     public GameObject connectedPoint;
     public GameObject damper;
+    public GameObject link;
     public bool isLeft;
 
     public GameObject rayOrigin;
@@ -20,10 +21,13 @@ public class TrackBehavior : MonoBehaviour
     private float minAngleThreshold;
 
     private float yDistanceRayOrigin;
+    private float distanceFromLink;
+    
     private void Start()
     {
         minAngleThreshold = -maxAngleThreshold;
         yDistanceRayOrigin = rayOrigin.transform.position.y - transform.position.y;
+        
     }
 
     // Update is called once per frame
@@ -75,7 +79,16 @@ public class TrackBehavior : MonoBehaviour
             Debug.Log("Hit!");
             yPos = hit.point.y - yDistanceRayOrigin;
             float yDistance = body.transform.position.y - yPos;
-            Debug.Log("distance : " + yDistance);
+//            Debug.Log("distance : " + yDistance);
+            distanceFromLink = Vector3.Distance(link.transform.position, transform.position);
+            Debug.Log("distance : " + distanceFromLink);
+//            if (distanceFromLink > 0.2f)
+//            {
+//                Debug.Log("Stretch the " + damper + "!");
+//                float yDeformer = damper.transform.localScale.y + distanceFromLink;
+//                Vector3 newSize = new Vector3(damper.transform.localScale.x,yDeformer,damper.transform.localScale.z);
+//                damper.transform.localScale = newSize;
+//            }
             if (yDistance > maxDistance)
             {
                 yPos = body.transform.position.y - maxDistance ;

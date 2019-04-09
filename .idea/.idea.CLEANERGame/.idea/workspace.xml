@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c576d181-da58-4a18-bf57-6e7a2f1c008e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Player_Tests.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Player_Tests.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PusherBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PusherBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TrackScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TrackScript.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Player/Compo/Damper.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Player/Compo/Damper.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TrackBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TrackBehavior.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,17 +38,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/TrackBehavior.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+            <state relative-caret-position="687">
+              <caret line="90" column="15" selection-start-line="84" selection-start-column="14" selection-end-line="90" selection-end-column="15" />
               <folding>
-                <marker date="1554819015490" expanded="false" signature="6:78" ph="..." />
-                <marker date="1554819015490" expanded="true" signature="122:3062" ph="{...}" />
-                <marker date="1554819015490" expanded="true" signature="550:694" ph="{...}" />
-                <marker date="1554819015490" expanded="true" signature="760:3060" ph="{...}" />
-                <marker date="1554819015490" expanded="true" signature="1423:1753" ph="{...}" />
-                <marker date="1554819015490" expanded="true" signature="1754:2111" ph="/* else //If the angle is greater than 90 degrees, it means that the pusher is supposed to be higher that the bod ... */" />
-                <marker date="1554819015490" expanded="true" signature="2599:2951" ph="{...}" />
-                <marker date="1554819015490" expanded="true" signature="2848:2941" ph="{...}" />
+                <marker date="1554821697954" expanded="false" signature="6:78" ph="..." />
+                <marker date="1554821697954" expanded="true" signature="122:3727" ph="{...}" />
+                <marker date="1554821697954" expanded="true" signature="619:772" ph="{...}" />
+                <marker date="1554821697954" expanded="true" signature="838:3725" ph="{...}" />
+                <marker date="1554821697954" expanded="true" signature="1523:1867" ph="{...}" />
+                <marker date="1554821697954" expanded="true" signature="1868:2225" ph="/* else //If the angle is greater than 90 degrees, it means that the pusher is supposed to be higher that the bod ... */" />
+                <marker date="1554821697954" expanded="true" signature="2713:3616" ph="{...}" />
+                <marker date="1554821697954" expanded="true" signature="3075:3472" ph="/* if (distanceFromLink &gt; 0.2f) ... */" />
+                <marker date="1554821697954" expanded="true" signature="3513:3606" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -183,12 +181,12 @@
       <workItem from="1554193586077" duration="16390000" />
       <workItem from="1554707674158" duration="13555000" />
       <workItem from="1554794456529" duration="5941000" />
-      <workItem from="1554804188310" duration="8110000" />
+      <workItem from="1554804188310" duration="9650000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106182000" />
+    <option name="totallyTimeSpent" value="107722000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -662,17 +660,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/TrackBehavior.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+        <state relative-caret-position="687">
+          <caret line="90" column="15" selection-start-line="84" selection-start-column="14" selection-end-line="90" selection-end-column="15" />
           <folding>
-            <marker date="1554819015490" expanded="false" signature="6:78" ph="..." />
-            <marker date="1554819015490" expanded="true" signature="122:3062" ph="{...}" />
-            <marker date="1554819015490" expanded="true" signature="550:694" ph="{...}" />
-            <marker date="1554819015490" expanded="true" signature="760:3060" ph="{...}" />
-            <marker date="1554819015490" expanded="true" signature="1423:1753" ph="{...}" />
-            <marker date="1554819015490" expanded="true" signature="1754:2111" ph="/* else //If the angle is greater than 90 degrees, it means that the pusher is supposed to be higher that the bod ... */" />
-            <marker date="1554819015490" expanded="true" signature="2599:2951" ph="{...}" />
-            <marker date="1554819015490" expanded="true" signature="2848:2941" ph="{...}" />
+            <marker date="1554821697954" expanded="false" signature="6:78" ph="..." />
+            <marker date="1554821697954" expanded="true" signature="122:3727" ph="{...}" />
+            <marker date="1554821697954" expanded="true" signature="619:772" ph="{...}" />
+            <marker date="1554821697954" expanded="true" signature="838:3725" ph="{...}" />
+            <marker date="1554821697954" expanded="true" signature="1523:1867" ph="{...}" />
+            <marker date="1554821697954" expanded="true" signature="1868:2225" ph="/* else //If the angle is greater than 90 degrees, it means that the pusher is supposed to be higher that the bod ... */" />
+            <marker date="1554821697954" expanded="true" signature="2713:3616" ph="{...}" />
+            <marker date="1554821697954" expanded="true" signature="3075:3472" ph="/* if (distanceFromLink &gt; 0.2f) ... */" />
+            <marker date="1554821697954" expanded="true" signature="3513:3606" ph="{...}" />
           </folding>
         </state>
       </provider>
