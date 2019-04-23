@@ -36,36 +36,18 @@ public class TrackBehavior : MonoBehaviour
         damper.transform.position = transform.position;
         
         Debug.Log("-------------------------------------");
-        
         //Rotation
-        const float c = 0.5f;
-        float a = body.transform.position.y - connectedPoint.transform.position.y;
-        a = Mathf.Clamp(a, -c, c);
-        Debug.Log("a : " +a );
-        float cosAngle = a / c;
-        Debug.Log("cosAngle : " +cosAngle);
-        float angle = Mathf.Acos(cosAngle);
-        float degreeAngle = angle * Mathf.Rad2Deg;
-        Debug.Log("angle into degrees : " +degreeAngle);
-        Quaternion rot = Quaternion.identity;
-        float newAngle;
-        if (degreeAngle < 90) // For right track
-        {
-            
-            newAngle = degreeAngle-90;;
-            newAngle = Mathf.Clamp(newAngle, minAngleThreshold, maxAngleThreshold); // We clamp the angle to a minimum angle
-            if(!isLeft) newAngle = -newAngle;
-            Debug.Log("final angle : " +newAngle);
-            rot= Quaternion.Euler(0,0,newAngle);
-        }
-//        else //If the angle is greater than 90 degrees, it means that the pusher is supposed to be higher that the body's center
-//        {
-//            newAngle = degreeAngle-90;
-//            newAngle = Mathf.Clamp(newAngle, 0, maxAngleThreshold); // We clamp the angle to a maximum angle
-//            rot= Quaternion.Euler(0,0,newAngle);
-//        }
-        damper.transform.rotation = rot;
 
+        Vector3 vectorToTarget = link.transform.position - damper.transform.position;
+        float distanceToLink = Vector3.Distance(link.transform.position, damper.transform.position);
+        float xScale = damper.transform.localScale.y + distanceToLink;
+        Vector3 newScale = new Vector3(xScale,damper.transform.localScale.y,damper.transform.localScale.z); // We adjust the size of the damper thanks to the distance from the body ("link" here).
+        damper.transform.localScale = newScale;
+        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
+        Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        damper.transform.rotation = q;
+        
         //Position
         Vector3 pusherPos = transform.position;
         Vector3 rayPos = rayOrigin.transform.position;
@@ -82,19 +64,18 @@ public class TrackBehavior : MonoBehaviour
 //            Debug.Log("distance : " + yDistance);
             distanceFromLink = Vector3.Distance(link.transform.position, transform.position);
             Debug.Log("distance : " + distanceFromLink);
-//            if (distanceFromLink > 0.2f)
-//            {
-//                Debug.Log("Stretch the " + damper + "!");
-//                float yDeformer = damper.transform.localScale.y + distanceFromLink;
-//                Vector3 newSize = new Vector3(damper.transform.localScale.x,yDeformer,damper.transform.localScale.z);
-//                damper.transform.localScale = newSize;
-//            }
             if (yDistance > maxDistance)
             {
                 yPos = body.transform.position.y - maxDistance ;
             }
         }
+        else
+        {
+            yPos = body.transform.position.y - maxDistance ;
+        }
         transform.position = new Vector2(body.transform.position.x + distanceWithBody, yPos);
+        
+
         
     }
 }

@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour {
             if(!faceRight)
             {
                 faceRight = true;
-                Flip();
+//                Flip();
             }
         }
         if(InputManager.hAxis < 0)
@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour {
             if(faceRight)
             {
                 faceRight = false;
-                Flip();
+//                Flip();
             }
         }
         else if(InputManager.hAxis > -0.1f && InputManager.hAxis < 0.1f)
