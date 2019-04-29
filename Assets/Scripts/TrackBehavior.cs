@@ -33,7 +33,7 @@ public class TrackBehavior : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        damper.transform.position = transform.position;
+       
         
         Debug.Log("-------------------------------------");
         //Rotation
@@ -74,7 +74,7 @@ public class TrackBehavior : MonoBehaviour
             yPos = body.transform.position.y - maxDistance ;
         }
         transform.position = new Vector2(body.transform.position.x + distanceWithBody, yPos);
-        
+        damper.transform.position = transform.position;
 
         
     }

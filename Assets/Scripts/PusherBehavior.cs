@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using TreeEditor;
-using UnityEditor.IMGUI.Controls;
+//using TreeEditor;
+//using UnityEditor.IMGUI.Controls;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -45,16 +45,16 @@ public class PusherBehavior : MonoBehaviour
         //Pusher follows the ground
         
         //Rotation
-        if (isMoving)
-        {
-            Quaternion q = Quaternion.AngleAxis(desiredAngle, Vector3.forward);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, q, Time.deltaTime * speed);
-            transform.position = body.transform.position;
-            transform.Translate(distanceWithBody,0,0,Space.Self);
-            float differenceBetweenAngles = desiredAngle - transform.rotation.eulerAngles.z;
-            Debug.Log("difference between angles = " +differenceBetweenAngles);
-            if (differenceBetweenAngles < 1) isMoving = false;
-        }
+//        if (isMoving)
+//        {
+//            Quaternion q = Quaternion.AngleAxis(desiredAngle, Vector3.forward);
+//            transform.rotation = Quaternion.RotateTowards(transform.rotation, q, Time.deltaTime * speed);
+//            transform.position = body.transform.position;
+//            transform.Translate(distanceWithBody,0,0,Space.Self);
+//            float differenceBetweenAngles = desiredAngle - transform.rotation.eulerAngles.z;
+//            Debug.Log("difference between angles = " +differenceBetweenAngles);
+//            if (differenceBetweenAngles < 1) isMoving = false;
+//        }
         const float c = 0.5f;
         float a = body.transform.position.y - arm.transform.position.y;
         a = Mathf.Clamp(a, -c, c);

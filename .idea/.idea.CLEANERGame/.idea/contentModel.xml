@@ -27,6 +27,7 @@
           <e p="PlayerController.cs" t="Include" />
           <e p="PusherBehavior.cs" t="Include" />
           <e p="Souvenir_Script.cs" t="Include" />
+          <e p="SpriteBehavior.cs" t="Include" />
           <e p="TrackBehavior.cs" t="Include" />
           <e p="TrashBallManager.cs" t="Include" />
           <e p="TrashBallPhysicsConstraints.cs" t="Include" />

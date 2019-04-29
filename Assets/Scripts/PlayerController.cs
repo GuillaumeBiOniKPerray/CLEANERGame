@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour {
 
 	private void Start ()
     {
-        trashBallOffset = transform.GetChild(0).gameObject;
+//        trashBallOffset = transform.GetChild(0).gameObject;
         rb = GetComponent<Rigidbody2D>();
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
