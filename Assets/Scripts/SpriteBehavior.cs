@@ -17,8 +17,8 @@ public class SpriteBehavior : MonoBehaviour
     {
         float normalizedDirection = playeRb.velocity.normalized.x;
         float rbMagnitude = playeRb.velocity.magnitude;
-        float clampedMag = Mathf.Clamp01(rbMagnitude);
-        Debug.Log("velocity = " + clampedMag);
+        float clampedMag = Mathf.InverseLerp(-5,5,rbMagnitude);
+//        Debug.Log("velocity = " + clampedMag);
         float rotToApply = clampedMag * maxAngle;
         transform.eulerAngles = new Vector3(0, 0, -rotToApply*normalizedDirection);
     }

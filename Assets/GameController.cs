@@ -34,6 +34,7 @@ public class GameController : MonoBehaviour {
         {
             if(!publicPlayTest) InitiateFirstLevel(startingLevelID);
             InitiateCamera(publicPlayTest);
+            UIManager.GoToGame();
         }
         else
         {

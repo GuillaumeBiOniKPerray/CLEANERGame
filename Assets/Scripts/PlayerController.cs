@@ -10,24 +10,27 @@ public class PlayerController : MonoBehaviour {
     // The avatar has to follow the player's commands.
     
     private Rigidbody2D rb;
-
+    private Animator animator;
     // Movements and Jump related public variables
     public float moveSpeed = 5;
     public float jumpForce = 2.2f;
     [Range(0,1)]public float jumpSpeedModifier =0.5f; // The speed is modified by the jump state
 
     public GameObject trashBall;// This refers to the trashball prefab
-    private GameObject trashBallOffset;// This is the place we want to instantiate a ball from
+    public GameObject trashBallOffset;// This is the place we want to instantiate a ball from
     public float maxDistanceToTrashball;
+    public float ballDragFactor;
+    public float playerSlowFactor;
     private bool faceRight = true; // right/left boolean used to flip the player's orientation
-    public bool isJumping = false;
+    private bool isJumping = false;
+//    public PusherBehavior pusherScript;
     private bool isCleaning; // Allows the player to stop gathering trash while holding a key.
 
     private GameObject currentTrashball; // Trashball that is being pushed
 
     //Layers
     public LayerMask trashBallLayer;
-    public LayerMask floorLayer;
+//    public LayerMask floorLayer;
 
     public enum PlayerState
     {
@@ -45,6 +48,7 @@ public class PlayerController : MonoBehaviour {
 //        trashBallOffset = transform.GetChild(0).gameObject;
         rb = GetComponent<Rigidbody2D>();
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
+        animator = GetComponent<Animator>();
     }
 	
 	private void FixedUpdate ()
@@ -59,7 +63,10 @@ public class PlayerController : MonoBehaviour {
             if(!faceRight)
             {
                 faceRight = true;
-//                Flip();
+//                pusherScript.isMoving = true;
+//                animator.SetTrigger("TurnReverse");
+//                pusherScript.SwitchPusherDirection();
+                Flip();
             }
         }
         if(InputManager.hAxis < 0)
@@ -68,7 +75,10 @@ public class PlayerController : MonoBehaviour {
             if(faceRight)
             {
                 faceRight = false;
-//                Flip();
+//                pusherScript.isMoving = true;
+//                animator.SetTrigger("Turn");
+//                pusherScript.SwitchPusherDirection();
+                Flip();
             }
         }
         else if(InputManager.hAxis > -0.1f && InputManager.hAxis < 0.1f)
@@ -85,8 +95,13 @@ public class PlayerController : MonoBehaviour {
         if (InputManager.PressLeftCtrl())
         {
             isCleaning = false;
+            animator.SetBool("isPressed",true);
         }
-        else isCleaning = true;
+        else
+        {
+            isCleaning = true;
+            animator.SetBool("isPressed",false);
+        }
 
         #endregion
 
@@ -104,7 +119,7 @@ public class PlayerController : MonoBehaviour {
             float ballRadius = currentTrashball.transform.localScale.x / 2;
             if(dist <= maxDistanceToTrashball+ ballRadius)
             {
-                ballRB.drag = 2;
+                ballRB.drag = ballDragFactor;
             }
             else
             {
@@ -112,6 +127,11 @@ public class PlayerController : MonoBehaviour {
                 currentTrashball = null;
             }
         }
+
+        Vector3 eulerRotation = transform.rotation.eulerAngles;
+        if (eulerRotation.z > 180) eulerRotation.z = eulerRotation.z - 360;
+        eulerRotation.z = Mathf.Clamp(eulerRotation.z, -15, 15);
+        transform.eulerAngles = eulerRotation;
     }
 
     private void Move(float dir)
@@ -175,6 +195,10 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+//    public void PusherInPosition()
+//    {
+//        pusherScript.isMoving = !pusherScript.isMoving;
+//    }
     //Expand this region to see the methods related to collision events
     #region CollisionEvents
 
@@ -207,6 +231,22 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.CompareTag("Floor") || collision.gameObject.CompareTag("Lifter"))
         {
             isJumping = false;
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Trashball"))
+        {
+            
+            GameObject trashballGO = other.gameObject;
+            Rigidbody2D trashRB = trashballGO.GetComponent<Rigidbody2D>();
+            if (transform.position.y < trashballGO.transform.position.y)
+            {
+//                Debug.Log("slow the trashball");
+//                trashRB.velocity = new Vector2(rb.velocity.x * ballSlowFactor, trashRB.velocity.y);
+//                rb.velocity = new Vector3(rb.velocity.x * playerSlowFactor, rb.velocity.y);
+            }
         }
     }
 
