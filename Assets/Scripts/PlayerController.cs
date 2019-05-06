@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour {
     public GameObject trashBallOffset;// This is the place we want to instantiate a ball from
     public float maxDistanceToTrashball;
     public float ballDragFactor;
-    public float playerSlowFactor;
     private bool faceRight = true; // right/left boolean used to flip the player's orientation
     private bool isJumping = false;
 //    public PusherBehavior pusherScript;
@@ -30,6 +29,8 @@ public class PlayerController : MonoBehaviour {
 
     //Layers
     public LayerMask trashBallLayer;
+
+    public LayerMask floorLayer;
 //    public LayerMask floorLayer;
 
     public enum PlayerState
@@ -55,6 +56,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (state == PlayerState.NOMOVE || state == PlayerState.PAUSED) return;
         
+        UnderFeetNormal();
         //Expand the following region to know more about the input events
         #region Inputs
         if (InputManager.hAxis>0)
@@ -128,22 +130,20 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-        Vector3 eulerRotation = transform.rotation.eulerAngles;
-        if (eulerRotation.z > 180) eulerRotation.z = eulerRotation.z - 360;
-        eulerRotation.z = Mathf.Clamp(eulerRotation.z, -15, 15);
-        transform.eulerAngles = eulerRotation;
     }
 
     private void Move(float dir)
     {
         rb.velocity = !isJumping ? new Vector2(dir * moveSpeed, rb.velocity.y) : new Vector2(dir * moveSpeed * jumpSpeedModifier, rb.velocity.y);
         Push(Mathf.RoundToInt(dir));
+        animator.SetBool("isMoving" , true);
     }
 
     private void Brake ()
     {
         if(!isJumping)
             rb.velocity = new Vector2 (0,rb.velocity.y);
+        animator.SetBool("isMoving" , false);
     }
 
     private void Flip()
@@ -155,6 +155,7 @@ public class PlayerController : MonoBehaviour {
     {
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         isJumping = true;
+        animator.SetBool("isJumping" , true);
     }
 
     private void CheckTrashBallPosition()
@@ -171,6 +172,33 @@ public class PlayerController : MonoBehaviour {
         if (hitMid.collider)
         {
             isJumping = false;
+            animator.SetBool("isJumping" , false);
+        }
+    }
+
+    private void UnderFeetNormal()
+    {
+        Vector3 point = transform.position;
+        RaycastHit2D hit = Physics2D.Raycast(point, Vector2.down, 0.4f,floorLayer); // I only consider the "Trashball" layer. Be careful about the 'distance' parameter!
+        Debug.DrawRay(point, Vector2.down, Color.red);
+        if (hit.collider)
+        {
+            Vector2 nrmal = hit.normal;
+                float zAngle = Vector3.Angle(Vector3.up, nrmal);
+               Vector3 cross= Vector3.Cross(Vector3.up, nrmal);
+               //si cross.z < 0 angle = -angle
+               if (cross.z < 0) zAngle = -zAngle;
+               Debug.Log("cross value : " + cross);
+                Debug.DrawRay(transform.position, Vector3.up, Color.green);
+                Debug.DrawRay(transform.position, hit.normal, Color.cyan);
+//                Debug.Log("the normal : " + hit.normal);
+                Debug.Log("zAngle : " + zAngle);
+//                float angleToApply = zAngle -90;
+//                Debug.Log("angle to apply : " + zAngle);
+                transform.rotation = Quaternion.Euler(0, 0, zAngle);
+            
+            
+//            transform.rotation = newRotation;
         }
     }
 
@@ -231,6 +259,7 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.CompareTag("Floor") || collision.gameObject.CompareTag("Lifter"))
         {
             isJumping = false;
+            animator.SetBool("isJumping" , false);
         }
     }
 

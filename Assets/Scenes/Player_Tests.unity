@@ -824,10 +824,13 @@ MonoBehaviour:
   trashBall: {fileID: 1424840656665886, guid: 8969e50823e5ba54db44c23dbbfeeeae, type: 3}
   trashBallOffset: {fileID: 0}
   maxDistanceToTrashball: 0.4
-  isJumping: 0
+  ballDragFactor: 0
   trashBallLayer:
     serializedVersion: 2
     m_Bits: 1024
+  floorLayer:
+    serializedVersion: 2
+    m_Bits: 0
   state: 0
 --- !u!50 &431647228
 Rigidbody2D:
@@ -4541,10 +4544,13 @@ MonoBehaviour:
   trashBall: {fileID: 1424840656665886, guid: 8969e50823e5ba54db44c23dbbfeeeae, type: 3}
   trashBallOffset: {fileID: 0}
   maxDistanceToTrashball: 0.4
-  isJumping: 0
+  ballDragFactor: 0
   trashBallLayer:
     serializedVersion: 2
     m_Bits: 1024
+  floorLayer:
+    serializedVersion: 2
+    m_Bits: 0
   state: 0
 --- !u!50 &1988785049
 Rigidbody2D:
@@ -4843,6 +4849,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
+    - target: {fileID: 4946116027660897757, guid: 8383b4db832711e40a2a02d6642a4baa,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1988785047}
+    - target: {fileID: 4946116027660897757, guid: 8383b4db832711e40a2a02d6642a4baa,
+        type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 1988785048}
     - target: {fileID: 4946116027660897756, guid: 8383b4db832711e40a2a02d6642a4baa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4898,16 +4914,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4946116027660897757, guid: 8383b4db832711e40a2a02d6642a4baa,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1988785047}
-    - target: {fileID: 4946116027660897757, guid: 8383b4db832711e40a2a02d6642a4baa,
-        type: 3}
-      propertyPath: playerController
-      value: 
-      objectReference: {fileID: 1988785048}
     - target: {fileID: 4946116027660897759, guid: 8383b4db832711e40a2a02d6642a4baa,
         type: 3}
       propertyPath: m_Enabled
@@ -5128,10 +5134,13 @@ MonoBehaviour:
   trashBall: {fileID: 1424840656665886, guid: 8969e50823e5ba54db44c23dbbfeeeae, type: 3}
   trashBallOffset: {fileID: 0}
   maxDistanceToTrashball: 0.4
-  isJumping: 0
+  ballDragFactor: 0
   trashBallLayer:
     serializedVersion: 2
     m_Bits: 1024
+  floorLayer:
+    serializedVersion: 2
+    m_Bits: 0
   state: 0
 --- !u!1001 &182082003645871267
 PrefabInstance:
@@ -9330,7 +9339,7 @@ PrefabInstance:
     - target: {fileID: 7481654071207004196, guid: 64b8627722804ff47b95e18e6716e6ee,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.99
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 7481654071207004196, guid: 64b8627722804ff47b95e18e6716e6ee,
         type: 3}
@@ -9376,6 +9385,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7481654071207004203, guid: 64b8627722804ff47b95e18e6716e6ee,
+        type: 3}
+      propertyPath: floorLayer.m_Bits
+      value: 20993
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64b8627722804ff47b95e18e6716e6ee, type: 3}
