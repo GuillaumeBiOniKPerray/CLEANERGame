@@ -219,8 +219,8 @@ GameObject:
   - component: {fileID: 212410868754441532}
   - component: {fileID: 114699599027722508}
   - component: {fileID: 95802408783450296}
-  - component: {fileID: 60555607743291716}
-  m_Layer: 0
+  - component: {fileID: 8654325516786813157}
+  m_Layer: 14
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,8 +324,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!60 &60555607743291716
-PolygonCollider2D:
+--- !u!61 &8654325516786813157
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -337,7 +337,7 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.5, y: 0.2964499}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -347,12 +347,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.8382949, y: 0.2152102}
-      - {x: 0.15241235, y: 0.21625996}
-      - {x: 0, y: 0}
-      - {x: 1, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.5928998}
+  m_EdgeRadius: 0
 --- !u!1 &1828138531784702
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +549,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 50
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0.5

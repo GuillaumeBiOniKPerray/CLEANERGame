@@ -6,26 +6,30 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
-
+    // Debug Tools
     public bool publicPlayTest;
     public bool noMenu;
     public bool isPaused;
+    public int startingLevelID;
+    
+    //LevelManager
     public List<LevelManager> levels = new List<LevelManager>();
     private static LevelManager currentLevelManager;
-    public int startingLevelID;
     private GameObject currentLevel;
     public int currentLevelID;
 
     public GameObject canvasObject;
-//    public GameObject menuGameObject;
-//    public GameObject pauseObject;
 
     public CameraManager camManager;
 
+    //Player
     public GameObject player;
     public PlayerController playerController;
-//    private GameObject currentPlayer;
 
+    //Audio
+    public AudioClip backgroundAmbient;
+    private AudioSource audioSource;
+    
 	private void Start ()
     {
         playerController = player.GetComponent<PlayerController>();
@@ -41,6 +45,9 @@ public class GameController : MonoBehaviour {
             UIManager.GoToMainMenu();
             camManager.isMenu = true;
         }
+
+        audioSource = GetComponent<AudioSource>();
+        SetUpAudio();
     }
 	
 	private void Update ()
@@ -56,7 +63,6 @@ public class GameController : MonoBehaviour {
                 UIManager.GoToMainMenu();
             }
         }
-            
     }
 	
     public void InitiateFirstLevel(int idSelector)
@@ -87,11 +93,15 @@ public class GameController : MonoBehaviour {
         }
     }
 
+    private void SetUpAudio()
+    {
+        audioSource.clip = backgroundAmbient;
+        audioSource.volume = 0.5f;
+        audioSource.Play();
+    }
+
     public void CloseMenu()
     {
-//        menuGameObject.transform.GetChild(0).gameObject.SetActive(true); // Main menu 
-//        menuGameObject.transform.GetChild(1).gameObject.SetActive(false); // LevelSelection
-//        menuGameObject.SetActive(false);
         UIManager.GoToGame();
         camManager.isMenu = false;
         InitiateCamera(publicPlayTest);
@@ -152,17 +162,6 @@ public class GameController : MonoBehaviour {
             SetLevel(levelID);
         }
     }
-
-    /*private void SetLevel(int id)
-    {
-        currentLevelID = id;
-        currentLevel = Instantiate(levels[currentLevelID].gameObject);
-        currentLevelManager = currentLevel.GetComponent<LevelManager>();
-        currentPlayer.transform.position = levels[currentLevelID].playerSpawn.transform.position;
-        currentPlayer.GetComponent<PlayerController>().SetLevelManager(currentLevelManager);
-        camManager.FillDestinationList(currentLevelManager.camPoints);
-        camManager.isReadyToMove = true;
-    }*/
     
     private void SetLevel(int id)
     {
@@ -182,7 +181,6 @@ public class GameController : MonoBehaviour {
 
     public static LevelManager GetCurrentLevelManager()
     {
-//        Debug.Log("level Manager : " + currentLevelManager);
         return currentLevelManager;
     }
 }

@@ -8,6 +8,10 @@ public class TrashBallManager : MonoBehaviour {
 
     public float scaleFactor = 0.05f;
     public float massFactor = 0.05f;
+    
+    //Sounds
+    public AudioClip[] trashClips;
+    private AudioSource audioSource;
 
     private Rigidbody2D rb;
     private float ownMass;
@@ -21,6 +25,7 @@ public class TrashBallManager : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         levelManager = GameController.GetCurrentLevelManager();
         massText = transform.GetChild(0).GetComponent<TextMeshPro>();
+        audioSource = GetComponent<AudioSource>();
     }
 	
 	private void Update ()
@@ -52,7 +57,10 @@ public class TrashBallManager : MonoBehaviour {
         transform.localScale += new Vector3(scaleF, scaleF, scaleF);
         rb.mass += massScaleAmount;
         if (toDestroy.CompareTag("Dust"))
+        {
             Destroy(toDestroy.gameObject);
+            PlayTrashClip();
+        }
         else GetComponent<EatAndBeingEaten>().EatABall(toDestroy);
         if(rb.mass >= 10)
         {
@@ -80,5 +88,12 @@ public class TrashBallManager : MonoBehaviour {
     private void KeepTextRot()
     {
         transform.GetChild(0).transform.rotation = Quaternion.identity;
+    }
+    
+    private void PlayTrashClip()
+    {
+        AudioClip selectClip = trashClips[Random.Range(0, trashClips.Length - 1)];
+        audioSource.clip = selectClip;
+        audioSource.Play();
     }
 }

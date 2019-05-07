@@ -26,7 +26,7 @@ public class Button_Script : MonoBehaviour {
         massText.text = "Min : " + minWeightRequired + "kg";
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         switch (collision.gameObject.tag) // We want the button to react with only 2 elements, the player or the trashball
         {

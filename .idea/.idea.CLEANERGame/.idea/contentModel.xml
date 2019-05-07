@@ -8,6 +8,7 @@
       <e p="Assets" t="Include">
         <e p="GameController.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="BorderScript.cs" t="Include" />
           <e p="BreakablePlateform.cs" t="Include" />
           <e p="Button_Script.cs" t="Include" />
           <e p="CameraManager.cs" t="Include" />
@@ -18,6 +19,7 @@
           <e p="EatAndBeingEaten.cs" t="Include" />
           <e p="EndGameConsole.cs" t="Include" />
           <e p="EndZoneScript.cs" t="Include" />
+          <e p="HoleScript.cs" t="Include" />
           <e p="InputManager.cs" t="Include" />
           <e p="LevelManager.cs" t="Include" />
           <e p="LevelSelectionManager.cs" t="Include" />

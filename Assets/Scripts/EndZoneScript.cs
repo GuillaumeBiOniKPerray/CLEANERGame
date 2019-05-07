@@ -34,9 +34,14 @@ public class EndZoneScript : MonoBehaviour {
     private GameObject ballToAbsorb;
     private bool canAbsorb;
 
+    //Audio Variables
+    public AudioClip trashAbsorbed;
+    public AudioClip burnTrash;
+    private AudioSource audioSource;
     private void Start()
     {
         levelManager = transform.parent.GetComponent<LevelManager>();
+        audioSource = GetComponent<AudioSource>();
         gameController = GameObject.Find("GameController").GetComponent<GameController>();
         GameObject gameUI = GameObject.Find("Canvas");
         if (gameUI)
@@ -49,6 +54,7 @@ public class EndZoneScript : MonoBehaviour {
         }
         else Debug.LogWarning("There is no Canvas on the scene! Go pick it in the prefab folder");
         goldMedalRequired = levelManager.GetTotalNumberOfTrashInLevel();
+        Debug.Log("LM GOLD MEDAL : " + goldMedalRequired);
         minTrashRequired = goldMedalRequired * 80 / 100 ; // To complete the level the player has got gather 80% of the total amount of trash
         minTrashRequired = Mathf.RoundToInt(minTrashRequired);
 //        Debug.Log("mintrashtowin : " + minTrashRequired);
@@ -76,11 +82,9 @@ public class EndZoneScript : MonoBehaviour {
             Rigidbody2D trashBallRb = trashBall.GetComponent<Rigidbody2D>();
             float trashBallWeight = trashBallRb.mass; // It is the mass of the trashball that counts for the completion purposes
             trashBall.SetActive(false);
-//            trashBall.layer = 11;
-//            trashBallRb.simulated = false;
-//            Destroy(trashBall.GetComponent<CircleCollider2D>());
             currentCompletion += trashBallWeight;
             UIManager.UpdateProgressionBar((int)currentCompletion/goldMedalRequired);
+            PlayAudio(trashAbsorbed);
         }
     }
 
@@ -100,6 +104,8 @@ public class EndZoneScript : MonoBehaviour {
             {
                 endGameMessage.text = "Le Secteur est propre!";
             }
+
+            PlayAudio(burnTrash);
         }
         else
         {
@@ -123,8 +129,15 @@ public class EndZoneScript : MonoBehaviour {
         Vector3 progressBarNewScale = new Vector3(completion, progressBarCurrScale.y, progressBarCurrScale.z);
         completion = completion * 100;
         completion = (int) completion;
+        completion = Mathf.Clamp(completion,0, 100);
         progressionText.text = (completion) + " %";
         enGameProgBar.transform.localScale = progressBarNewScale;
+    }
+
+    private void PlayAudio(AudioClip audioClip)
+    {
+        audioSource.clip = audioClip;
+        audioSource.Play();
     }
     
 }
