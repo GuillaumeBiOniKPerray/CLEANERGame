@@ -35,10 +35,11 @@ public class CameraManager : MonoBehaviour {
         }
         else // After moving to the different level destinations the camera gets back to the player
         {
-            cameraYpos = transform.position.y;
+            cameraYpos = player.transform.position.y;
             if (!Camera.main) return;
             Vector3 playViewportPos = Camera.main.WorldToViewportPoint(player.transform.position);
-            CenterOnTarget(playViewportPos);
+//            CenterOnTarget(playViewportPos);
+            transform.position = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z -2.5f);
         }
     }
 
@@ -92,7 +93,7 @@ public class CameraManager : MonoBehaviour {
     private void CancelCamMove()
     {
         camDestinations.Clear();
-        transform.position = player.transform.position;
+        transform.position = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z -2.5f);
         isReadyToMove = false;
         gameController.playerController.state = PlayerController.PlayerState.PLAYING;
     }

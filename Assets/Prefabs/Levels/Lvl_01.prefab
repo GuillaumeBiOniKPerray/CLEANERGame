@@ -2944,7 +2944,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1108778615340210}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 06a17a508a13e874bb59c57b11c01273, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -5971,7 +5971,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1290594607801020}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 06a17a508a13e874bb59c57b11c01273, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -16653,6 +16653,8 @@ MonoBehaviour:
   playerSpawn: {fileID: 1116877609586578}
   camPoints:
   - {fileID: 1828273569027016}
+  background: {fileID: 2988168923088882445, guid: 220f4322c66a445429674d7c4f8e2e4a,
+    type: 3}
   trashToDestroy: []
   endZone: {fileID: 3926253792237454720}
 --- !u!1 &1764131349536074

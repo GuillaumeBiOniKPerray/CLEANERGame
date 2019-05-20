@@ -10,8 +10,8 @@ public class TrashBallManager : MonoBehaviour {
     public float massFactor = 0.05f;
     
     //Sounds
-    public AudioClip[] trashClips;
     private AudioSource audioSource;
+    private bool isPlayingSound;
 
     private Rigidbody2D rb;
     private float ownMass;
@@ -31,6 +31,17 @@ public class TrashBallManager : MonoBehaviour {
 	private void Update ()
     {
         KeepTextRot();
+        if (rb.velocity.magnitude > 0 && !isPlayingSound)
+        {
+            audioSource.Play();
+            isPlayingSound = true;
+        }
+
+        if (rb.velocity.magnitude == 0)
+        {
+            audioSource.Stop();
+            isPlayingSound = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -58,8 +69,9 @@ public class TrashBallManager : MonoBehaviour {
         rb.mass += massScaleAmount;
         if (toDestroy.CompareTag("Dust"))
         {
-            Destroy(toDestroy.gameObject);
-            PlayTrashClip();
+            TrashManager trashScript = toDestroy.GetComponent<TrashManager>();
+            trashScript.PlayTrashClip();
+//            Destroy(toDestroy.gameObject);
         }
         else GetComponent<EatAndBeingEaten>().EatABall(toDestroy);
         if(rb.mass >= 10)
@@ -88,12 +100,5 @@ public class TrashBallManager : MonoBehaviour {
     private void KeepTextRot()
     {
         transform.GetChild(0).transform.rotation = Quaternion.identity;
-    }
-    
-    private void PlayTrashClip()
-    {
-        AudioClip selectClip = trashClips[Random.Range(0, trashClips.Length - 1)];
-        audioSource.clip = selectClip;
-        audioSource.Play();
     }
 }

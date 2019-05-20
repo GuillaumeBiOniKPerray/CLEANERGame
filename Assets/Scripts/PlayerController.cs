@@ -249,9 +249,9 @@ public class PlayerController : MonoBehaviour {
                     GameObject newTrash = Instantiate(trashBall, trashBallOffset.transform.position, Quaternion.identity);
                     levelManager.AddToTrashToDestroy(newTrash);
                     newTrash.GetComponent<Rigidbody2D>().mass = other.GetComponent<TrashManager>().trashValue;
-                    PlayTrashClip();
-//                    levelManager.SetNumberOfTrashCollected();
-                    Destroy(other.gameObject);
+                    TrashManager trashScript = other.GetComponent<TrashManager>();
+                    trashScript.PlayTrashClip();
+//                    Destroy(other.gameObject);
                 }
                 break;
             
@@ -300,7 +300,7 @@ public class PlayerController : MonoBehaviour {
     private void AudioEngine()
     {
         audioSource.clip = engineSound;
-        audioSource.volume = 0.25f;
+        audioSource.volume = 0.1f;
         audioSource.Play();
         audioSource.loop = true;
     }
@@ -327,5 +327,6 @@ public class PlayerController : MonoBehaviour {
         AudioClip selectClip = trashClips[Random.Range(0, trashClips.Length - 1)];
         audioSource.clip = selectClip;
         audioSource.Play();
+        StartCoroutine(PlayNextSoundAfterThisOne(selectClip));
     }
 }

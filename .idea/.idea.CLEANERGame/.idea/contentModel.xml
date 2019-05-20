@@ -8,10 +8,12 @@
       <e p="Assets" t="Include">
         <e p="GameController.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="BackgroundScript.cs" t="Include" />
           <e p="BorderScript.cs" t="Include" />
           <e p="BreakablePlateform.cs" t="Include" />
           <e p="Button_Script.cs" t="Include" />
           <e p="CameraManager.cs" t="Include" />
+          <e p="CamTargetBehavior.cs" t="Include" />
           <e p="ClickableLevelIcon.cs" t="Include" />
           <e p="Conveyor_Script.cs" t="Include" />
           <e p="ConveyorConsole_Script.cs" t="Include" />

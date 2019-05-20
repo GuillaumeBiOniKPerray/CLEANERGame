@@ -79,7 +79,7 @@ public class GameController : MonoBehaviour {
     {
         if (!isTest)
         {
-            camManager.player = player;
+//            camManager.player = player;
             camManager.AssignCameraPosition();
             camManager.FillDestinationList(currentLevelManager.camPoints);
             camManager.isReadyToMove = true;
@@ -87,7 +87,7 @@ public class GameController : MonoBehaviour {
         }
         else
         {
-            camManager.player = player;
+//            camManager.player = player;
             camManager.AssignCameraPosition();
             Debug.Log("test mode camera");
         }

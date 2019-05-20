@@ -151,11 +151,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleFactor: 0.05
   massFactor: 0.1
-  trashClips:
-  - {fileID: 8300000, guid: 6635c010a8373f14e912264e3a112563, type: 3}
-  - {fileID: 8300000, guid: 831f2c6402a9ffc42a107dcc588e02a6, type: 3}
-  - {fileID: 8300000, guid: 8f6070b42946d504e927444a5c15f532, type: 3}
-  - {fileID: 8300000, guid: 36c023772bbcf824cb23b3d5af30a30e, type: 3}
 --- !u!82 &8464766884712992090
 AudioSource:
   m_ObjectHideFlags: 0
@@ -166,11 +161,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6bed81afa02d75741a876f18e1e371da, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.678
+  m_Volume: 0.611
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

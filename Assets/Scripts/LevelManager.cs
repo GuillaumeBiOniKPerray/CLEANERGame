@@ -50,6 +50,7 @@ public class LevelManager : MonoBehaviour {
     private GameObject currentPlayer;
 
     public List<GameObject> camPoints = new List<GameObject>(); // Camera travelling destinations
+    public GameObject background;
 
     public List<GameObject> trashToDestroy = new List<GameObject>(); // Trash is destroyed when switching to another level
 
@@ -59,7 +60,8 @@ public class LevelManager : MonoBehaviour {
     {
         if (!souvenirUI) Debug.LogWarning("You didn't set the souvenirUI prefab! Go pick it in the prefab folder.");
         if (!totalTrash) Debug.LogWarning("You didn't set the totalTrash GameObject! Put all your 'trash' in an empty gameobject and put it in the Level Manager input called totalTrash ");
-
+        if(!background) Debug.LogWarning("There are no Backgrounds associated to " + gameObject + " be sure to assign one in the inspector");
+        
         numberOfCollectedTrash = 0;
         numberOfTrashInLevel = totalTrash.transform.childCount;
         
@@ -67,6 +69,8 @@ public class LevelManager : MonoBehaviour {
         FindSouvenirGameObject();
         progressionBar = canvas.transform.GetChild(1).GetChild(0).GetChild(0).gameObject; // The progression bar is a children BE CAREFUL!
         progressionBar.transform.parent.gameObject.SetActive(true);
+
+        Instantiate(background, Camera.main.transform);
     }
 
     private void FindSouvenirGameObject() // All levels don't have souvenir (yet), so when there's one, we cycle through the level elements to catch the souvenir

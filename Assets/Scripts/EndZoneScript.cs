@@ -54,7 +54,7 @@ public class EndZoneScript : MonoBehaviour {
         }
         else Debug.LogWarning("There is no Canvas on the scene! Go pick it in the prefab folder");
         goldMedalRequired = levelManager.GetTotalNumberOfTrashInLevel();
-        Debug.Log("LM GOLD MEDAL : " + goldMedalRequired);
+//        Debug.Log("LM GOLD MEDAL : " + goldMedalRequired);
         minTrashRequired = goldMedalRequired * 80 / 100 ; // To complete the level the player has got gather 80% of the total amount of trash
         minTrashRequired = Mathf.RoundToInt(minTrashRequired);
 //        Debug.Log("mintrashtowin : " + minTrashRequired);

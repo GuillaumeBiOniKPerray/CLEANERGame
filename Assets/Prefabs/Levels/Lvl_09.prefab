@@ -407,7 +407,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1019678917606618}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 06a17a508a13e874bb59c57b11c01273, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -625,6 +625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50659659582078438
 Rigidbody2D:
   serializedVersion: 4
@@ -1358,6 +1359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50202040266547096
 Rigidbody2D:
   serializedVersion: 4
@@ -2235,6 +2237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50569133707174058
 Rigidbody2D:
   serializedVersion: 4
@@ -2322,7 +2325,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1108778615340210}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 06a17a508a13e874bb59c57b11c01273, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -3716,6 +3719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50942603343094484
 Rigidbody2D:
   serializedVersion: 4
@@ -4100,6 +4104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50080239444488274
 Rigidbody2D:
   serializedVersion: 4
@@ -4242,6 +4247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50734134072941796
 Rigidbody2D:
   serializedVersion: 4
@@ -4554,6 +4560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50245622079116516
 Rigidbody2D:
   serializedVersion: 4
@@ -4950,6 +4957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50191773200147878
 Rigidbody2D:
   serializedVersion: 4
@@ -6856,7 +6864,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1443089768817314}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 06a17a508a13e874bb59c57b11c01273, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -7683,6 +7691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50167587885783360
 Rigidbody2D:
   serializedVersion: 4
@@ -10195,6 +10204,8 @@ MonoBehaviour:
   numberOfTrashInLevel: 0
   numberOfCollectedTrash: 0
   souvenirUI: {fileID: 1085175751671434, guid: 671c66717e5a4b244a006daa3a1c86aa, type: 3}
+  hasSouvenir: 0
+  playerPickedSouvenir: 0
   player: {fileID: 1817954315855244, guid: 9a830c018f6ff4a48a916d8f302985d1, type: 3}
   playerSpawn: {fileID: 1116877609586578}
   camPoints:
@@ -11995,6 +12006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50577377205035646
 Rigidbody2D:
   serializedVersion: 4
@@ -12879,6 +12891,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50460776128366650
 Rigidbody2D:
   serializedVersion: 4
@@ -14532,6 +14545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trashValue: 2
+  spriteList: []
 --- !u!50 &50039327616123372
 Rigidbody2D:
   serializedVersion: 4
