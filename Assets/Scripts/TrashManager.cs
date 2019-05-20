@@ -93,7 +93,7 @@ public class TrashManager : MonoBehaviour {
 
     private float RandomPitch()
     {
-	    return Random.Range(0.2f, 0.7f);
+	    return Random.Range(-2, 2);
     }
     
 

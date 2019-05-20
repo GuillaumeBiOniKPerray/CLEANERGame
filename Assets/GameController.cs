@@ -96,7 +96,7 @@ public class GameController : MonoBehaviour {
     private void SetUpAudio()
     {
         audioSource.clip = backgroundAmbient;
-        audioSource.volume = 0.5f;
+        audioSource.volume = 0.1f;
         audioSource.Play();
     }
 

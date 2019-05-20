@@ -9326,6 +9326,11 @@ PrefabInstance:
       propertyPath: engineSound
       value: 
       objectReference: {fileID: 8300000, guid: 605a3adf1e06a2e4ebe9c80fee5651a7, type: 3}
+    - target: {fileID: 7481654071207004203, guid: 64b8627722804ff47b95e18e6716e6ee,
+        type: 3}
+      propertyPath: pitchFactor
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 328624766, guid: 64b8627722804ff47b95e18e6716e6ee, type: 3}
       propertyPath: m_audioClip
       value: 
@@ -14169,7 +14174,7 @@ PrefabInstance:
     - target: {fileID: 4946116027660897757, guid: 8383b4db832711e40a2a02d6642a4baa,
         type: 3}
       propertyPath: startingLevelID
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4946116027660897757, guid: 8383b4db832711e40a2a02d6642a4baa,
         type: 3}

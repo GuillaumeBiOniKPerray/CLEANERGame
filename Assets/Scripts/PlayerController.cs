@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor;
 using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour {
@@ -23,11 +24,12 @@ public class PlayerController : MonoBehaviour {
     public float ballDragFactor;
     private bool faceRight = true; // right/left boolean used to flip the player's orientation
     private bool isJumping = false;
-//    public PusherBehavior pusherScript;
     private bool isCleaning; // Allows the player to stop gathering trash while holding a key.
 
     private GameObject currentTrashball; // Trashball that is being pushed
 
+    private float storedVelocity;
+    
     //Layers
     public LayerMask trashBallLayer;
     public LayerMask floorLayer;
@@ -38,6 +40,8 @@ public class PlayerController : MonoBehaviour {
     public AudioClip jumpSound;
     public AudioClip pushingSound;
     private bool soundTransition;
+    [Tooltip("0.5 seems like a good base")]
+    public float pitchFactor; //0.5 seems a good base
     
     //Trash Sounds
     public AudioClip[] trashClips;
@@ -67,6 +71,7 @@ public class PlayerController : MonoBehaviour {
         if (state == PlayerState.NOMOVE || state == PlayerState.PAUSED) return;
         
         UnderFeetNormal();
+        ChangePitch();
         //Expand the following region to know more about the input events
         #region Inputs
         if (InputManager.hAxis>0)
@@ -75,9 +80,6 @@ public class PlayerController : MonoBehaviour {
             if(!faceRight)
             {
                 faceRight = true;
-//                pusherScript.isMoving = true;
-//                animator.SetTrigger("TurnReverse");
-//                pusherScript.SwitchPusherDirection();
                 Flip();
             }
         }
@@ -87,9 +89,6 @@ public class PlayerController : MonoBehaviour {
             if(faceRight)
             {
                 faceRight = false;
-//                pusherScript.isMoving = true;
-//                animator.SetTrigger("Turn");
-//                pusherScript.SwitchPusherDirection();
                 Flip();
             }
         }
@@ -119,11 +118,10 @@ public class PlayerController : MonoBehaviour {
 
         if (rb.velocity.y < 0 && isJumping)
         {
-            //CheckFloorPosition();
             CheckTrashBallPosition();
         }
 
-        if(currentTrashball)
+        if(currentTrashball) // If the ball is close to the player, we "stick" it to the floor.
         {
             Rigidbody2D ballRB = currentTrashball.GetComponent<Rigidbody2D>();
             float dist = currentTrashball.transform.position.x - transform.position.x;
@@ -139,12 +137,16 @@ public class PlayerController : MonoBehaviour {
                 currentTrashball = null;
             }
         }
-
+        
     }
+
+
 
     private void Move(float dir)
     {
         rb.velocity = !isJumping ? new Vector2(dir * moveSpeed, rb.velocity.y) : new Vector2(dir * moveSpeed * jumpSpeedModifier, rb.velocity.y);
+        storedVelocity = rb.velocity.magnitude;
+        Debug.Log("DESIRED velocity : " + storedVelocity);
         Push(Mathf.RoundToInt(dir));
         animator.SetBool("isMoving" , true);
     }
@@ -297,6 +299,16 @@ public class PlayerController : MonoBehaviour {
         levelManager = newLevelManager;
     }
 
+    private void ChangePitch()
+    {
+        float difference = storedVelocity - rb.velocity.magnitude;
+        Debug.Log("Difference : " + difference);
+        if (difference > 0.8f)
+        {
+            audioSource.pitch = difference +0.3f;    
+        }
+    }
+    
     private void AudioEngine()
     {
         audioSource.clip = engineSound;
@@ -320,13 +332,5 @@ public class PlayerController : MonoBehaviour {
         yield return new WaitForSeconds(audioClip.length);
         AudioEngine();
         soundTransition = false;
-    }
-
-    private void PlayTrashClip()
-    {
-        AudioClip selectClip = trashClips[Random.Range(0, trashClips.Length - 1)];
-        audioSource.clip = selectClip;
-        audioSource.Play();
-        StartCoroutine(PlayNextSoundAfterThisOne(selectClip));
     }
 }

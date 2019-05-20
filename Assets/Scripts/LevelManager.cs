@@ -69,7 +69,8 @@ public class LevelManager : MonoBehaviour {
         FindSouvenirGameObject();
         progressionBar = canvas.transform.GetChild(1).GetChild(0).GetChild(0).gameObject; // The progression bar is a children BE CAREFUL!
         progressionBar.transform.parent.gameObject.SetActive(true);
-
+        
+        if(Camera.main.transform.childCount != 0) Destroy(Camera.main.transform.GetChild(0).gameObject);
         Instantiate(background, Camera.main.transform);
     }
 

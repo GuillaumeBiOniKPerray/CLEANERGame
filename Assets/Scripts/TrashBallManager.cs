@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using TMPro;
+using Debug = UnityEngine.Debug;
 
 public class TrashBallManager : MonoBehaviour {
 
@@ -31,9 +32,14 @@ public class TrashBallManager : MonoBehaviour {
 	private void Update ()
     {
         KeepTextRot();
-        if (rb.velocity.magnitude > 0 && !isPlayingSound)
+        float rbVelocity = rb.velocity.magnitude;
+//        Debug.Log(gameObject.name + "'s velocity : " + rbVelocity);
+        audioSource.volume = rbVelocity;
+        if (rbVelocity > 0 && !isPlayingSound)
         {
             audioSource.Play();
+            
+//            audioSource.volume = rbVelocity;
             isPlayingSound = true;
         }
 
